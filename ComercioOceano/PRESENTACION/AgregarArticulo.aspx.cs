@@ -29,42 +29,65 @@ namespace PRESENTACION.PaginaAdmin
                 ddl_Proveedor.DataTextField = "DescripcionP";
                 ddl_Proveedor.DataValueField = "ID";
                 ddl_Proveedor.DataBind();
+
+                lbl_Mensaje.Text = "";
+                lbl_Mensaje.Visible = false;
             }
         }
         
-        protected void txt_Agregar_Click(object sender, EventArgs e)
+        protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            Articulo art = new Articulo(txt_Descripcion.Text, Byte.Parse(txt_Stock.Text), decimal.Parse(txt_PrecioCompra.Text),
+            if (txt_Descripcion.Text != "" && txt_Fecha.Text != "" && txt_ImagenUrl.Text != "" && txt_PrecioCompra.Text != "" && txt_PrecioVenta.Text != "" && txt_Stock.Text != "")
+            {
+                Articulo art = new Articulo(txt_Descripcion.Text, Byte.Parse(txt_Stock.Text), decimal.Parse(txt_PrecioCompra.Text),
                 decimal.Parse(txt_PrecioVenta.Text), int.Parse(ddl_Proveedor.Text), DateTime.Parse(txt_Fecha.Text),
                 int.Parse(ddl_Categoria.Text), txt_ImagenUrl.Text, Boolean.Parse(ddl_Estado.Text));
-            N_Articulos n_Articulos = new N_Articulos();
-            if(!n_Articulos.grabarArticulo(art))
-            {
-                lbl_Mensaje.Text = "Error en el registro del Articulo";
+                N_Articulos n_Articulos = new N_Articulos();
+
+                if (!n_Articulos.grabarArticulo(art))
+                {
+                    lbl_Mensaje.Text = "";
+                    lbl_Mensaje.Text = "Error! en el guardado del Articulo";
+                    lbl_Mensaje.Attributes.Remove("class");
+                    lbl_Mensaje.Attributes.Add("class", "alert alert-danger");
+                    lbl_Mensaje.Visible = true;
+                }
+                else
+                {
+                    lbl_Mensaje.Text = "";
+                    lbl_Mensaje.Text = "El Articulo se ha guardado con exito!";
+                    lbl_Mensaje.Attributes.Remove("class");
+                    lbl_Mensaje.Attributes.Add("class", "alert alert-success");
+                    lbl_Mensaje.Visible = true;
+                }
             }
             else
             {
-                lbl_Mensaje.Text = "El Articulo se ha grabado Ok";
+                lbl_Mensaje.Text = "";
+                lbl_Mensaje.Text = "Complete todos los campos";
+                lbl_Mensaje.Attributes.Remove("class");
+                lbl_Mensaje.Attributes.Add("class", "alert alert-warning");
+                lbl_Mensaje.Visible = true;
             }
-                                  
+                
         }
 
-        protected void lkbPaginaPrincipal_Click(object sender, EventArgs e)
+        protected void btnPaginaPrincipal_Click(object sender, EventArgs e)
         {
             Response.Redirect("PAginaPrincipalAdmin.aspx?AdminU=" + lblAdmin.Text);
         }
 
-        protected void lkbProveedores_Click(object sender, EventArgs e)
+        protected void btnPaginaProveedores_Click(object sender, EventArgs e)
         {
             Response.Redirect("Proveedores.aspx?AdminU=" + lblAdmin.Text);
         }
 
-        protected void lkbUsuarios_Click(object sender, EventArgs e)
+        protected void btnPaginaUsuarios_Click(object sender, EventArgs e)
         {
             Response.Redirect("Usuarios.aspx?AdminU=" + lblAdmin.Text);
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void btnCancelar_Click(object sender, EventArgs e)
         {
             Response.Redirect("PAginaPrincipalAdmin.aspx?AdminU=" + lblAdmin.Text);
         }

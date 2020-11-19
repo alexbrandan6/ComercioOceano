@@ -1,0 +1,11 @@
+﻿body {
+    background-color: white;
+    padding: 0;
+}
+
+.header {
+    background-color: #007BFF;
+    height: 60px;
+    display: flex;
+    justify-content: end;
+}

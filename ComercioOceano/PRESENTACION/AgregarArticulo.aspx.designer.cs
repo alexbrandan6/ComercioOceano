@@ -7,11 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace PRESENTACION.PaginaAdmin {
-    
-    
-    public partial class AgregarArticulo {
-        
+namespace PRESENTACION.PaginaAdmin
+{
+
+
+    public partial class AgregarArticulo
+    {
+
         /// <summary>
         /// Control form1.
         /// </summary>
@@ -20,34 +22,34 @@ namespace PRESENTACION.PaginaAdmin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
-        /// Control lkbPaginaPrincipal.
+        /// Control btnPaginaPrincipal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lkbPaginaPrincipal;
-        
+        protected global::System.Web.UI.WebControls.Button btnPaginaPrincipal;
+
         /// <summary>
-        /// Control lkbProveedores.
+        /// Control btnPaginaProveedores.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lkbProveedores;
-        
+        protected global::System.Web.UI.WebControls.Button btnPaginaProveedores;
+
         /// <summary>
-        /// Control lkbUsuarios.
+        /// Control btnPaginaUsuarios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lkbUsuarios;
-        
+        protected global::System.Web.UI.WebControls.Button btnPaginaUsuarios;
+
         /// <summary>
         /// Control lblAdmin.
         /// </summary>
@@ -56,16 +58,7 @@ namespace PRESENTACION.PaginaAdmin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAdmin;
-        
-        /// <summary>
-        /// Control Label1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// Control txt_Descripcion.
         /// </summary>
@@ -74,7 +67,7 @@ namespace PRESENTACION.PaginaAdmin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_Descripcion;
-        
+
         /// <summary>
         /// Control txt_Stock.
         /// </summary>
@@ -83,7 +76,7 @@ namespace PRESENTACION.PaginaAdmin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_Stock;
-        
+
         /// <summary>
         /// Control txt_PrecioCompra.
         /// </summary>
@@ -92,7 +85,7 @@ namespace PRESENTACION.PaginaAdmin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_PrecioCompra;
-        
+
         /// <summary>
         /// Control txt_PrecioVenta.
         /// </summary>
@@ -101,7 +94,7 @@ namespace PRESENTACION.PaginaAdmin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_PrecioVenta;
-        
+
         /// <summary>
         /// Control ddl_Proveedor.
         /// </summary>
@@ -110,7 +103,7 @@ namespace PRESENTACION.PaginaAdmin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddl_Proveedor;
-        
+
         /// <summary>
         /// Control txt_Fecha.
         /// </summary>
@@ -119,7 +112,7 @@ namespace PRESENTACION.PaginaAdmin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_Fecha;
-        
+
         /// <summary>
         /// Control ddl_Categoria.
         /// </summary>
@@ -128,7 +121,7 @@ namespace PRESENTACION.PaginaAdmin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddl_Categoria;
-        
+
         /// <summary>
         /// Control txt_ImagenUrl.
         /// </summary>
@@ -137,7 +130,7 @@ namespace PRESENTACION.PaginaAdmin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_ImagenUrl;
-        
+
         /// <summary>
         /// Control ddl_Estado.
         /// </summary>
@@ -146,25 +139,25 @@ namespace PRESENTACION.PaginaAdmin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddl_Estado;
-        
+
         /// <summary>
-        /// Control txt_Agregar.
+        /// Control btnAgregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button txt_Agregar;
-        
+        protected global::System.Web.UI.WebControls.Button btnAgregar;
+
         /// <summary>
-        /// Control Button2.
+        /// Control btnCancelar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
-        
+        protected global::System.Web.UI.WebControls.Button btnCancelar;
+
         /// <summary>
         /// Control lbl_Mensaje.
         /// </summary>
