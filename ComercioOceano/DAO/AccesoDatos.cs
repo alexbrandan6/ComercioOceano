@@ -10,7 +10,7 @@ namespace DAO
 {
     public class AccesoDatos
     {
-        string rutaSQL = "Data Source=BRANDAN;Initial Catalog=ComercioOceano;Integrated Security=True";
+        string rutaSQL = "Data Source=localhost; Initial Catalog=ComercioOceano;Integrated Security=True";
         public SqlConnection obtenerConexion()
         {
             SqlConnection cn = new SqlConnection(rutaSQL);
