@@ -1,0 +1,59 @@
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.dll
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.pdb
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.dll
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.pdb
+E:\Prog III\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.dll
+E:\Prog III\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.pdb
+E:\Prog III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+E:\Prog III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.dll
+E:\Prog III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.pdb
+E:\Prog III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.dll
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.pdb
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.dll
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.pdb
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\DAO\bin\Debug\ENTIDAD.dll
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\DAO\bin\Debug\ENTIDAD.pdb
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.dll
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.pdb
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\DAO\bin\Debug\ENTIDAD.dll
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\DAO\bin\Debug\ENTIDAD.pdb
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.dll
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.pdb
+F:\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.dll
+F:\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.pdb
+F:\TpIntegrador\ComercioOceano\DAO\bin\Debug\ENTIDAD.dll
+F:\TpIntegrador\ComercioOceano\DAO\bin\Debug\ENTIDAD.pdb
+F:\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+F:\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+F:\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csproj.CopyComplete
+F:\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.dll
+F:\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.pdb
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.dll
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.pdb
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\DAO\bin\Debug\ENTIDAD.dll
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\DAO\bin\Debug\ENTIDAD.pdb
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.dll
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.pdb
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\bin\Debug\ENTIDAD.dll
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\bin\Debug\ENTIDAD.pdb
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.dll
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\bin\Debug\DAO.pdb
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\bin\Debug\ENTIDAD.dll
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\bin\Debug\ENTIDAD.pdb
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.dll
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\DAO\obj\Debug\DAO.pdb

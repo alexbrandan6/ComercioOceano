@@ -1,0 +1,85 @@
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+.footer, .push {
+height: 4em;
+}
+
+#fondoPagina{
+position: fixed;
+z-index: -1;
+top: 0;
+left: 0;
+width: 100%;
+}
+
+#cabeza{
+position: fixed;
+width: auto;
+height: 116px;
+left: 0px;
+top: 0px;
+
+background: #3EB9FF;
+}
+
+#logoBarraBusqueda{
+position: absolute;
+width: 434px;
+height: 76px;
+left: 503px;
+top: 20px;
+}
+#logoCarrito{
+position: absolute;
+width: 60px;
+height: 56px;
+left: 1200px;
+top: 30px;
+}
+#logoUsuario{
+position: absolute;
+width: 58.52px;
+height: 56px;
+left: 1281px;
+top: 30px;
+}
+#logoComercioOceano{
+position: absolute;
+width: 206px;
+height: 195px;
+left: 14px;
+top: -24px;
+}
+
+#pie{
+position: absolute;
+height: 116px;
+left: 0px;
+top: 908px;
+
+background: #000000;
+}
+#facebookLogo{
+position: absolute;
+width: 103px;
+height: 105px;
+left: 17px;
+top: 18px;
+}
+#instagramLogo{
+position: absolute;
+width: 103px;
+height: 105px;
+left: 136px;
+top: 18px;
+}

@@ -1,0 +1,110 @@
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll.config
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.pdb
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csprojAssemblyReference.cache
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csproj.CoreCompileInputs.cache
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csproj.CopyComplete
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.dll
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.pdb
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.dll
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.dll
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.pdb
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.pdb
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.dll
+C:\Users\FVG\Desktop\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.pdb
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll.config
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.pdb
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.dll
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.dll
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.dll
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.pdb
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.pdb
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.pdb
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csprojResolveAssemblyReference.cache
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csproj.CoreCompileInputs.cache
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.dll
+E:\Prog III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.pdb
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll.config
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.pdb
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.dll
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.dll
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.dll
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.pdb
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.pdb
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.pdb
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csprojAssemblyReference.cache
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csproj.CoreCompileInputs.cache
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csproj.CopyComplete
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.dll
+C:\Users\FVG\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.pdb
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll.config
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.pdb
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.dll
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.dll
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.dll
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.pdb
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.pdb
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.pdb
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.dll
+C:\Users\Administrador\Desktop\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.pdb
+F:\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll.config
+F:\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll
+F:\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.pdb
+F:\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.dll
+F:\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.dll
+F:\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.dll
+F:\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.pdb
+F:\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.pdb
+F:\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.pdb
+F:\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csprojResolveAssemblyReference.cache
+F:\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csproj.CoreCompileInputs.cache
+F:\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csproj.CopyComplete
+F:\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.dll
+F:\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.pdb
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll.config
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.pdb
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.dll
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.dll
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.dll
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.pdb
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.pdb
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.pdb
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csprojAssemblyReference.cache
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csproj.CoreCompileInputs.cache
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csproj.CopyComplete
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.dll
+C:\Users\FVG\Desktop\Downloads\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.pdb
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll.config
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.dll
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\PRESENTACION.pdb
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.dll
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.dll
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.dll
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\ENTIDAD.pdb
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\NEGOCIO.pdb
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\bin\DAO.pdb
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csprojAssemblyReference.cache
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csproj.CoreCompileInputs.cache
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.csproj.CopyComplete
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.dll
+D:\Users\Alex\Documents\TSP alex\Programacion\Programacion III\TpIntegrador\ComercioOceano\PRESENTACION\obj\Debug\PRESENTACION.pdb
