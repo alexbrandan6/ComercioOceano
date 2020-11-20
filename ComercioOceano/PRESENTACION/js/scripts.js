@@ -46,3 +46,11 @@ $(".allownumericwithoutdecimal").on("keypress keyup blur", function (event) {
         event.preventDefault();
     }
 });
+
+// remueve las etiquetas de un control
+function removeLabel(control, from, to) {
+    control = control.slice(control.search(from) + 1);
+    control = control.slice(0, control.search(to));
+    control;
+    return control;
+}

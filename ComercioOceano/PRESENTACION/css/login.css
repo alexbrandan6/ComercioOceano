@@ -1,0 +1,20 @@
+﻿body {
+    margin: 10px;
+    background-color: #007BFF;
+}
+
+.login-box {
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.usr {
+    width: 150px;
+    height: 150px;
+}
