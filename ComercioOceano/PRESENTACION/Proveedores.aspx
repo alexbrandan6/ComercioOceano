@@ -7,34 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link href="../StyleSheet1.css" rel="stylesheet" />
-    <style type="text/css">
-        #MenuPrincipal{
-            width: 100%;
-            height: 100px;
-            color: black;
-        }
-        #MenuPrincipal table tr td{
-            text-align: center;
-        }
-        #MenuPrincipal table tr td a{
-            text-decoration: none;
-        }
-        .tablacabecera {
-            width: 100%;
-        }
-        .style-tablaenblanco {
-            width: 137px;
-        }
-        .auto-style2 {
-            width: 100%;
-        }
-        .auto-style3 {
-            width: 254px;
-        }
-        .auto-style4 {
-            height: 23px;
-        }
-        </style>
+
 </head>
 <link href="StyleSheet1.css" rel="stylesheet" />
 <body>
