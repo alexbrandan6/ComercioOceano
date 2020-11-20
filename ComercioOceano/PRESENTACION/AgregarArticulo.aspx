@@ -8,6 +8,7 @@
     <title>Agregar Articulo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="../css/header.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
 </head>
 
 <body>
@@ -29,18 +30,18 @@
                 </div>
                 <div class="col-sm-6">
                     <label class="control-label">Stock</label>
-                    <asp:TextBox ID="txt_Stock" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txt_Stock" runat="server" CssClass="allownumericwithoutdecimal form-control"></asp:TextBox>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-sm-6">
-                    <label class="control-label">Precio de compra</label>
-                    <asp:TextBox ID="txt_PrecioCompra" runat="server" CssClass="form-control"></asp:TextBox>
+                    <label class="control-label">Precio de compra $</label>
+                    <asp:TextBox ID="txt_PrecioCompra" runat="server" CssClass="allownumericwithdecimal form-control"></asp:TextBox>
                 </div>
                 <div class="col-sm-6">
-                    <label class="control-label">Precio de venta</label>
-                    <asp:TextBox ID="txt_PrecioVenta" runat="server" CssClass="form-control"></asp:TextBox>
+                    <label class="control-label">Precio de venta $</label>
+                    <asp:TextBox ID="txt_PrecioVenta" runat="server" CssClass="allownumericwithdecimal form-control"></asp:TextBox>
                 </div>
             </div>
 
@@ -93,5 +94,16 @@
             </div>
         </div>
     </form>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 </body>
 </html>
+
+<script>
+
+    datepicker('txt_Fecha');
+
+</script>
