@@ -4,96 +4,28 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-            <link href="PaginaAdmin/StyleSheet1.css" rel="stylesheet" />
-            <link href="StyleSheet1.css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <link href="StyleSheet1.css" rel="stylesheet" />
-    <style type="text/css">
-        #MenuPrincipal{
-            width: 100%;
-            height: 50px;
-            color: black;
-        }
-        #MenuPrincipal table tr td{
-            text-align: center;
-        }
-        #MenuPrincipal table tr td a{
-            text-decoration: none;
-        }
-        .style-tablaenblanco {
-            width: 137px;
-        }
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            height: 24px;
-        }
-        .auto-style3 {
-            height: 25px;
-        }
-        .auto-style19 {
-            height: 24px;
-            width: 187px;
-        }
-        .auto-style15 {
-            width: 100%;
-        }
-        .auto-style23 {
-            width: 309px;
-            height: 75px;
-        }
-        .auto-style25 {
-            width: 100%;
-            height: 25px;
-        }
-        </style>
+    <title>Pagina Principal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="../css/header.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-            <table class="auto-style25">
-                <tr>
-                    <td class="auto-style23">
-                        <asp:LinkButton ID="lkbArticulos" runat="server" OnClick="lkbArticulos_Click">Articulos</asp:LinkButton>
-                    </td>
-                    <td class="style-tablaenblanco">
-                        <asp:LinkButton ID="lkbProveedores" runat="server" OnClick="lkbProveedores_Click1">Proveedores</asp:LinkButton>
-                    </td>
-                    <td class="style-tablaenblanco">
-                        <asp:LinkButton ID="lkbCategorias" runat="server" OnClick="lkbCategorias_Click1">Categorias</asp:LinkButton>
-                    </td>
-                    <td class="style-tablaenblanco">
-                        <asp:LinkButton ID="lkbUsuarios" runat="server" OnClick="lkbUsuarios_Click1">Usuarios</asp:LinkButton>
-                    </td>
-                    <td class="style-tablaenblanco">
-                        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Ver perfil</asp:LinkButton>
-                    </td>
-                    <td class="style-tablaenblanco">
-                        <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Salir</asp:LinkButton>
-                    </td>
-                </tr>
-            </table>
+        <div class="header">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <asp:Button ID="btnArticulos" Text="Articulos" runat="server" CssClass="btn btn-primary" OnClick="btnArticulos_Click" />
+                <asp:Button ID="btnProveedores" Text="Proveedores" runat="server" CssClass="btn btn-primary" OnClick="btnProveedores_Click" />
+                <asp:Button ID="btnCategorias" Text="Categorias" runat="server" CssClass="btn btn-primary" OnClick="btnCategorias_Click" />
+                <asp:Button ID="btnUsuarios" Text="Usuarios" runat="server" CssClass="btn btn-primary" OnClick="btnUsuarios_Click" />
+                <asp:Button ID="btnPerfil" Text="Ver Perfil" runat="server" CssClass="btn btn-primary" OnClick="btnPerfil_Click" />
+                <asp:Button ID="btnSalir" Text="Salir" runat="server" CssClass="btn btn-danger" OnClick="btnSalir_Click" />
+
+                <asp:Label ID="lblAdmin" runat="server" CssClass="control-label" Visible="false"></asp:Label>
+            </div>
+        </div>
+
         <div>
-            <table class="auto-style1">
-                <tr>
-                    <td class="auto-style3" colspan="2">
-                        <table class="auto-style1">
-                            <tr>
-                                <td>
-                                    <asp:Label ID="lblAdmin" runat="server"></asp:Label>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style19">
-                        <asp:LinkButton ID="LinkButton2" runat="server">Ver perfil</asp:LinkButton>
-                    </td>
-                    <td class="auto-style2">&nbsp;</td>
-                </tr>
-            </table>
             <table class="auto-style15">
                 <tr>
                     <td>Articulo <asp:TextBox ID="txtNombreArticulo" runat="server"></asp:TextBox>

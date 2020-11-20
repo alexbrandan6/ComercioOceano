@@ -108,31 +108,6 @@ namespace PRESENTACION
             cargarGridView();
         }
 
-        protected void lkbArticulos_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AgregarArticulo.aspx?AdminU=" + lblAdmin.Text);
-        }
-
-        protected void lkbProveedores_Click1(object sender, EventArgs e)
-        {
-            Response.Redirect("Proveedores.aspx?AdminU=" + lblAdmin.Text);
-        }
-
-        protected void lkbCategorias_Click1(object sender, EventArgs e)
-        {
-            Response.Redirect("Categorias.aspx?AdminU=" + lblAdmin.Text);
-        }
-
-        protected void lkbUsuarios_Click1(object sender, EventArgs e)
-        {
-            Response.Redirect("Usuarios.aspx?AdminU=" + lblAdmin.Text);
-        }
-
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
             Response.Redirect("PaginaPrincipal.aspx?");
@@ -149,6 +124,36 @@ namespace PRESENTACION
             tabla = n_a.filtrarArticuloAdmin(nombreA, cat, precio, rangoP);
             grid_Articulos.DataSource = tabla;
             grid_Articulos.DataBind();
+        }
+
+        protected void btnArticulos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AgregarArticulo.aspx?AdminU=" + lblAdmin.Text);
+        }
+
+        protected void btnProveedores_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Proveedores.aspx?AdminU=" + lblAdmin.Text);
+        }
+
+        protected void btnCategorias_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Categorias.aspx?AdminU=" + lblAdmin.Text);
+        }
+
+        protected void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Usuarios.aspx?AdminU=" + lblAdmin.Text);
+        }
+
+        protected void btnPerfil_Click(object sender, EventArgs e)
+        {
+            // Llenar para ir a pagina del perfil
+        }
+
+        protected void btnSalir_Click(object sender, EventArgs e)
+        {
+            // llenar para redireccionar al login
         }
     }
 }

@@ -7,11 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace PRESENTACION {
-    
-    
-    public partial class PAginaPrincipalAdmin {
-        
+namespace PRESENTACION
+{
+
+
+    public partial class PAginaPrincipalAdmin
+    {
+
         /// <summary>
         /// Control form1.
         /// </summary>
@@ -20,61 +22,61 @@ namespace PRESENTACION {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
-        /// Control lkbArticulos.
+        /// Control btnArticulos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lkbArticulos;
-        
+        protected global::System.Web.UI.WebControls.Button btnArticulos;
+
         /// <summary>
-        /// Control lkbProveedores.
+        /// Control btnProveedores.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lkbProveedores;
-        
+        protected global::System.Web.UI.WebControls.Button btnProveedores;
+
         /// <summary>
-        /// Control lkbCategorias.
+        /// Control btnCategorias.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lkbCategorias;
-        
+        protected global::System.Web.UI.WebControls.Button btnCategorias;
+
         /// <summary>
-        /// Control lkbUsuarios.
+        /// Control btnUsuarios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lkbUsuarios;
-        
+        protected global::System.Web.UI.WebControls.Button btnUsuarios;
+
         /// <summary>
-        /// Control LinkButton1.
+        /// Control btnPerfil.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
-        
+        protected global::System.Web.UI.WebControls.Button btnPerfil;
+
         /// <summary>
-        /// Control LinkButton4.
+        /// Control btnSalir.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton4;
-        
+        protected global::System.Web.UI.WebControls.Button btnSalir;
+
         /// <summary>
         /// Control lblAdmin.
         /// </summary>
@@ -83,16 +85,7 @@ namespace PRESENTACION {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAdmin;
-        
-        /// <summary>
-        /// Control LinkButton2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
-        
+
         /// <summary>
         /// Control txtNombreArticulo.
         /// </summary>
@@ -101,7 +94,7 @@ namespace PRESENTACION {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNombreArticulo;
-        
+
         /// <summary>
         /// Control ddlCategorias.
         /// </summary>
@@ -110,7 +103,7 @@ namespace PRESENTACION {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCategorias;
-        
+
         /// <summary>
         /// Control txtPrecio.
         /// </summary>
@@ -119,7 +112,7 @@ namespace PRESENTACION {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrecio;
-        
+
         /// <summary>
         /// Control ddlPrecio.
         /// </summary>
@@ -128,7 +121,7 @@ namespace PRESENTACION {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlPrecio;
-        
+
         /// <summary>
         /// Control btnBuscar.
         /// </summary>
@@ -137,7 +130,7 @@ namespace PRESENTACION {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBuscar;
-        
+
         /// <summary>
         /// Control grid_Articulos.
         /// </summary>
