@@ -10,9 +10,9 @@ using System.Data;
 
 namespace PRESENTACION
 {
-    public partial class ABMProveedores : System.Web.UI.Page
+    public partial class ABMCategorias : System.Web.UI.Page
     {
-        N_Proveedor n_proveedor = new N_Proveedor();
+        N_Categoria n_categoria = new N_Categoria();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["stUser"] == null)
@@ -24,9 +24,9 @@ namespace PRESENTACION
             {
                 try
                 {
-                    if (Request.QueryString["idProveedor"] != null)
+                    if (Request.QueryString["idCategoria"] != null)
                     {
-                        CargarData(Request.QueryString["idProveedor"]);
+                        CargarData(Request.QueryString["idCategoria"]);
                         btnEliminar.Visible = true;
                     }
                     else
@@ -42,15 +42,12 @@ namespace PRESENTACION
             }
         }
 
-        private void CargarData(String idArticulo)
+        private void CargarData(String idCategoria)
         {
 
-            DataTable tabla = n_proveedor.obtenerProveedorId(int.Parse(idArticulo));
+            DataTable tabla = n_categoria.obtenerCategoriaId(int.Parse(idCategoria));
 
-            txtDescripcion.Text = tabla.Rows[0]["DescripcionP"].ToString();
-            txtDireccion.Text = tabla.Rows[0]["Direccion"].ToString();
-            txtTelefono.Text = tabla.Rows[0]["Telefono"].ToString();
-            txtMail.Text = tabla.Rows[0]["Mail"].ToString();
+            txtDescripcion.Text = tabla.Rows[0]["DescripcionC"].ToString();
             ddlEstado.SelectedValue = tabla.Rows[0]["Estado"].ToString();
         }
 
@@ -85,9 +82,8 @@ namespace PRESENTACION
             {
                 if (VerificarCampos())
                 {
-                    Proveedor pro = new Proveedor(txtDescripcion.Text, txtDireccion.Text, txtTelefono.Text, txtMail.Text,
-                                    Boolean.Parse(ddlEstado.Text));
-                    if (!n_proveedor.grabarProveedor(pro))
+                    Categoria cat = new Categoria(txtDescripcion.Text, Boolean.Parse(ddlEstado.Text));
+                    if (!n_categoria.grabarCategoria(cat))
                     {
                         lblMensaje.Text = "";
                         lblMensaje.Text = "Error al guardar el Proveedor!";
@@ -112,7 +108,7 @@ namespace PRESENTACION
                     lblMensaje.Attributes.Add("class", "alert alert-warning");
                     lblMensaje.Visible = true;
                 }
-                    
+
             }
             catch (Exception)
             {
@@ -124,10 +120,10 @@ namespace PRESENTACION
         {
             try
             {
-                Proveedor pro = new Proveedor();
-                pro.Id = int.Parse(Request.QueryString["idProveedor"]);
+                Categoria cat = new Categoria();
+                cat.ID = int.Parse(Request.QueryString["idCategoria"]);
 
-                if (n_proveedor.bajaLogicaProveedor(pro))
+                if (n_categoria.bajalogicaCategoria(cat))
                 {
                     lblMensaje.Text = "";
                     lblMensaje.Text = "El Proveedor se ha eliminado con exito!";
@@ -152,7 +148,7 @@ namespace PRESENTACION
         }
         protected bool VerificarCampos()
         {
-            if (txtDescripcion.Text != "" && txtDireccion.Text != "" && txtMail.Text != "" && txtTelefono.Text != "")
+            if (txtDescripcion.Text != "")
                 return true;
             else
                 return false;

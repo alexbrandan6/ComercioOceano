@@ -16,7 +16,11 @@ namespace NEGOCIO
         public DataTable obtenerTablaCategorias()
         {
             return dao.ObtenerTablaCategorias();
-        }     
+        }
+        public DataTable obtenerCategoriaId(int idCategoria)
+        {
+            return dao.obtenerCategoriaId(idCategoria);
+        }
         public bool grabarCategoria(Categoria cat)
         {
             if (dao.AgregarCategoria(cat))

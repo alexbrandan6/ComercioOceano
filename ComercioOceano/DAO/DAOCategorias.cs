@@ -16,7 +16,12 @@ namespace DAO
         {
             DataTable tabla = ds.ObtenerTabla("Categorias", "SELECT * FROM Categorias");
             return tabla;
-        }        
+        }
+        public DataTable obtenerCategoriaId(int idCategoria)
+        {
+            DataTable tabla = ds.ObtenerTabla("Articulos", "SELECT * FROM Categoria where ID = " + idCategoria);
+            return tabla;
+        }
         private void ArmarParametrosCategoria(ref SqlCommand Comando, Categoria cat)
         {
             SqlParameter SqlParametros = new SqlParameter();

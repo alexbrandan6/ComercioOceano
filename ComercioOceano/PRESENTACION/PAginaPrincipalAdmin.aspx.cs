@@ -39,35 +39,6 @@ namespace PRESENTACION
             rpUsuarios.DataSource = tabla;
             rpUsuarios.DataBind();
         }
-        protected void InsertButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void lkbAgregarArticulo_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AgregarArticulo.aspx");
-        }
-
-        protected void lkbCategorias_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Categorias.aspx");
-        }
-
-        protected void lkbProveedores_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Proveedores.aspx");
-        }
-
-        protected void lkbUsuarios_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Usuarios.aspx");
-        }        
-
-        protected void LinkButton4_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("PaginaPrincipal.aspx?");
-        }
 
         protected void btnArticulos_Click(object sender, EventArgs e)
         {
@@ -81,12 +52,12 @@ namespace PRESENTACION
 
         protected void btnCategorias_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Categorias.aspx?AdminU=" + lblAdmin.Text);
+            Response.Redirect("ABMCategorias.aspx");
         }
 
         protected void btnUsuarios_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Usuarios.aspx?AdminU=" + lblAdmin.Text);
+            Response.Redirect("ABMUsuarios.aspx");
         }
 
         protected void btnPerfil_Click(object sender, EventArgs e)

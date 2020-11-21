@@ -8,6 +8,7 @@
     <title>Pagina Principal</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="../css/header.css" rel="stylesheet" />
+    <link href="../css/footer.css" rel="stylesheet" />
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
 
@@ -15,15 +16,13 @@
 <body>
     <form id="form1" runat="server">
         <div class="header">
-            <div class="btn-group" role="group" aria-label="Basic example">
+            <div class="btn-group" role="group">
                 <asp:Button ID="btnArticulos" Text="Articulos" runat="server" CssClass="btn btn-primary" OnClick="btnArticulos_Click" />
                 <asp:Button ID="btnProveedores" Text="Proveedores" runat="server" CssClass="btn btn-primary" OnClick="btnProveedores_Click" />
                 <asp:Button ID="btnCategorias" Text="Categorias" runat="server" CssClass="btn btn-primary" OnClick="btnCategorias_Click" />
                 <asp:Button ID="btnUsuarios" Text="Usuarios" runat="server" CssClass="btn btn-primary" OnClick="btnUsuarios_Click" />
                 <asp:Button ID="btnPerfil" Text="Ver Perfil" runat="server" CssClass="btn btn-primary" OnClick="btnPerfil_Click" />
                 <asp:Button ID="btnSalir" Text="Salir" runat="server" CssClass="btn btn-danger" OnClick="btnSalir_Click" />
-
-                <asp:Label ID="lblAdmin" runat="server" CssClass="control-label" Visible="false"></asp:Label>
             </div>
         </div>
 
@@ -60,6 +59,43 @@
             </div>
         </div>
     </form>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <img src="IMAGENES/imagenes/logoComercioOceano.png">
+            <p class="footer-company-name">© 2020 Alex Brandan</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>
+                    <span>Buenos Aires</span>
+                    Argentina
+                </p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+54 123456789</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:alexbrandan6@gmail.com">alexbrandan6@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Sobre mí</span>
+                Aca escribo algo sobre mi.
+            </p>
+            <div class="footer-icons">
+                <a href="https://www.instagram.com/alex_brandan6/">Instagram</a>
+                <a href="https://www.linkedin.com/in/alexbrandan06/">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
