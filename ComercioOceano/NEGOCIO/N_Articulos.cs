@@ -23,6 +23,12 @@ namespace NEGOCIO
         {
             return dao.obtenerTablaArticulos();
         }
+
+        public DataTable obtenerArticuloId(int idArticulo)
+        {
+            return dao.obtenerArticuloId(idArticulo);
+        }
+
         public DataTable filtrarArticulo(string nombreA, string cat, string precio, string precioRango)
         {
             DataTable tabla = new DataTable();

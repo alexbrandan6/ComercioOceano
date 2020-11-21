@@ -31,6 +31,12 @@ namespace DAO
             return tabla;
         }
 
+        public DataTable obtenerArticuloId(int idArticulo)
+        {
+            DataTable tabla = ds.ObtenerTabla("Articulos", "SELECT * FROM Articulos where ID = " + idArticulo);
+            return tabla;
+        }
+
         public DataTable filtrarArticulo(string consulta)
         {
             DataTable tabla = ds.ObtenerTabla("Articulos", consulta);
@@ -89,7 +95,7 @@ namespace DAO
             SqlParametros = Comando.Parameters.Add("@ID", SqlDbType.BigInt);
             SqlParametros.Value = art.Id;
         }
-            public bool AgregarArticulo(Articulo art)
+        public bool AgregarArticulo(Articulo art)
         {
             SqlCommand Comando = new SqlCommand();
             ArmarParametrosArticulo(ref Comando, art);

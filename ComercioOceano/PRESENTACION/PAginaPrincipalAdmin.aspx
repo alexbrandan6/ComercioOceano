@@ -35,6 +35,7 @@
                             <tr>
                                 <th scope="col">Id</th>
                                 <th scope="col">Descripción</th>
+                                <th scope="col">Estado</th>
                             </tr>
                         </thead>
                         <tbody class="searchable" style="cursor: pointer">
@@ -42,10 +43,13 @@
                                 <ItemTemplate>
                                     <tr>
                                         <td class="id">
-                                            <asp:Label ID="lbl_eit_ID" runat="server" Text='<%# Bind("ID") %>'></asp:Label>
+                                            <asp:Label ID="lblId" runat="server" Text='<%# Bind("ID") %>'></asp:Label>
                                         </td>
                                         <td class="usr">
-                                            <asp:Label ID="txt_eit_Descripcion" runat="server" Text='<%#Bind("Descripcion")%>'></asp:Label>
+                                            <asp:Label ID="ldlDescripcion" runat="server" Text='<%#Bind("Descripcion")%>'></asp:Label>
+                                        </td>
+                                        <td class="est">
+                                            <asp:Label ID="lblEstado" runat="server" Text='<%#Bind("Estado")%>'></asp:Label>
                                         </td>
                                     </tr>
                                 </ItemTemplate>
@@ -104,7 +108,7 @@
     $("#tblArticulos tbody tr").click(function () {
         var id = $('.id', this).html().trim();
         id = removeLabel(id, '>', '<');
-        window.location = 'Articulos.aspx?art=' + id + '&AdminU=' + $('#lblAdmin').val();
+        window.location = 'ABMArticulos.aspx?idArticulo=' + id;
     });
 
 </script>
