@@ -17,6 +17,10 @@ namespace NEGOCIO
         {
             return dao.obtenerTablaProveedores();
         }
+        public DataTable obtenerProveedorId(int idProveedor)
+        {
+            return dao.obtenerProveedorId(idProveedor);
+        }
         public bool grabarProveedor(Proveedor pro)
         {
             if (dao.AgregarProveedor(pro))

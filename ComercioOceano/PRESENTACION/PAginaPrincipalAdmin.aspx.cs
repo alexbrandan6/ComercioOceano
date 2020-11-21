@@ -16,14 +16,20 @@ namespace PRESENTACION
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblAdmin.Text = Request.QueryString["AdminU"];
-
-            if (!IsPostBack)
+            if (Session["stUser"] == null)
             {
-                DataTable tabla2 = new DataTable();
-                tabla2 = n_a.obtenerTabla();
-                rpUsuarios.DataSource = tabla2;
-                rpUsuarios.DataBind();
+                Session["stUser"] = null;
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                if (!IsPostBack)
+                {
+                    DataTable tabla2 = new DataTable();
+                    tabla2 = n_a.obtenerTabla();
+                    rpUsuarios.DataSource = tabla2;
+                    rpUsuarios.DataBind();
+                }
             }
         }
         public void cargarGridView()
@@ -65,12 +71,12 @@ namespace PRESENTACION
 
         protected void btnArticulos_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AgregarArticulo.aspx?AdminU=" + lblAdmin.Text);
+            Response.Redirect("ABMArticulos.aspx");
         }
 
         protected void btnProveedores_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Proveedores.aspx?AdminU=" + lblAdmin.Text);
+            Response.Redirect("ABMProveedores.aspx");
         }
 
         protected void btnCategorias_Click(object sender, EventArgs e)

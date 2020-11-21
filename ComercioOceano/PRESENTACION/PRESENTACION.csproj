@@ -75,7 +75,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ABMArticulos.aspx" />
+    <Content Include="ABMProveedores.aspx" />
     <Content Include="Carrito.aspx" />
+    <Content Include="css\header.css" />
+    <Content Include="css\login.css" />
     <Content Include="IMAGENES\asado.jpg" />
     <Content Include="IMAGENES\cochinillo.jpg" />
     <Content Include="IMAGENES\fondo.jpg" />
@@ -97,6 +101,8 @@
     <Content Include="AgregarArticulo.aspx" />
     <Content Include="Categorias.aspx" />
     <Content Include="IMAGENES\tomahawk.jpg" />
+    <Content Include="js\scripts.js" />
+    <Content Include="Login.aspx" />
     <Content Include="plantilla.css" />
     <Content Include="Proveedores.aspx" />
     <Content Include="Usuarios.aspx" />
@@ -109,6 +115,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABMArticulos.aspx.cs">
+      <DependentUpon>ABMArticulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABMArticulos.aspx.designer.cs">
+      <DependentUpon>ABMArticulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ABMProveedores.aspx.cs">
+      <DependentUpon>ABMProveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABMProveedores.aspx.designer.cs">
+      <DependentUpon>ABMProveedores.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Carrito.aspx.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,6 +149,13 @@
     </Compile>
     <Compile Include="Categorias.aspx.designer.cs">
       <DependentUpon>Categorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Proveedores.aspx.cs">
       <DependentUpon>Proveedores.aspx</DependentUpon>

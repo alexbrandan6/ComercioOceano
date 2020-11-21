@@ -24,15 +24,19 @@ namespace PRESENTACION
             {
                 try
                 {
-                    if (Request.QueryString["idArticulo"] != null)
+                    if (!IsPostBack)
                     {
-                        CargarData(Request.QueryString["idArticulo"]);
-                        btnEliminar.Visible = true;
+                        if (Request.QueryString["idArticulo"] != null)
+                        {
+                            CargarData(Request.QueryString["idArticulo"]);
+                            btnEliminar.Visible = true;
+                        }
+                        else
+                        {
+                            btnEliminar.Visible = false;
+                        }
                     }
-                    else
-                    {
-                        btnEliminar.Visible = false;
-                    }
+                        
                 }
                 catch (Exception)
                 {
@@ -162,6 +166,7 @@ namespace PRESENTACION
             {
                 Articulo art = new Articulo();
                 art.Id = int.Parse(Request.QueryString["idArticulo"]);
+
                 if (n_a.bajalogicaArticulo(art))
                 {
                     lblMensaje.Text = "";
