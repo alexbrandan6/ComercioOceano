@@ -13,6 +13,9 @@ namespace PRESENTACION
     public partial class PAginaPrincipalAdmin : System.Web.UI.Page
     {
         N_Articulos n_a = new N_Articulos();
+        N_Categoria n_c = new N_Categoria();
+        N_Proveedor n_p = new N_Proveedor();
+        N_Usuario n_u = new N_Usuario();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,17 +28,27 @@ namespace PRESENTACION
             {
                 if (!IsPostBack)
                 {
-                    DataTable tabla2 = new DataTable();
-                    tabla2 = n_a.obtenerTabla();
-                    rpUsuarios.DataSource = tabla2;
-                    rpUsuarios.DataBind();
+                    cargarGridViews();
                 }
             }
         }
-        public void cargarGridView()
+        public void cargarGridViews()
         {
             DataTable tabla = new DataTable();
+
             tabla = n_a.obtenerTabla();
+            rpArticulos.DataSource = tabla;
+            rpArticulos.DataBind();
+
+            tabla = n_c.obtenerTablaCategorias();
+            rpCategorias.DataSource = tabla;
+            rpCategorias.DataBind();
+
+            tabla = n_p.obtenerTablaProveedores();
+            rpProveedores.DataSource = tabla;
+            rpProveedores.DataBind();
+
+            tabla = n_u.obtenerTablaUsuarios();
             rpUsuarios.DataSource = tabla;
             rpUsuarios.DataBind();
         }

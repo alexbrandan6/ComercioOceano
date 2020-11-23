@@ -32,7 +32,7 @@ namespace DAO
             return dt;
         }
 
-        public void grabarUsuario(Usuario usr)
+        public bool grabarUsuario(Usuario usr)
         {
             string insert = "INSERT INTO Usuarios(Nombres, Apellidos, fechaNac, Genero, Telefono, Direccion, " +
                 "Mail, NombreUsuario, Contrasenia, Estado) VALUES (@nombres, @apellidos, @fechaNac, @genero, @telefono, " +
@@ -51,8 +51,12 @@ namespace DAO
             cm.Parameters.AddWithValue("@contra", usr.getContrasenia());
             cm.Parameters.AddWithValue("@estado",1);
 
-            cm.ExecuteNonQuery();
+            int FilasCambiadas = cm.ExecuteNonQuery();
             cnn.Close();
+            if (FilasCambiadas == 1)
+                return true;
+            else
+                return false;
         }
 
         public DataTable buscarUsuario(string nombreU, string contra)
@@ -72,6 +76,12 @@ namespace DAO
 
             cnn.Close();
             return dt;
+        }
+
+        public DataTable obtenerUsuarioId(int idUsuario)
+        {
+            DataTable tabla = ds.ObtenerTabla("Usuarios", "SELECT * FROM Usuarios where ID = " + idUsuario);
+            return tabla;
         }
 
         public DataTable buscarAdmin(string nombreU, string contra)

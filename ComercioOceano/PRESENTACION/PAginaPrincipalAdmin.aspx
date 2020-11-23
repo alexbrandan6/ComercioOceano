@@ -28,33 +28,170 @@
 
         <div class="container" style="padding-top: 50px;">
             <div class="row">
-                <div class="col-lg-12">
-                    <table id="tblArticulos" class="table table-hover table-bordered" style="background-color: aliceblue;">
-                        <thead>
-                            <tr>
-                                <th scope="col">Id</th>
-                                <th scope="col">Descripción</th>
-                                <th scope="col">Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody class="searchable" style="cursor: pointer">
-                            <asp:Repeater ID="rpUsuarios" runat="server">
-                                <ItemTemplate>
+                <div class="col-lg-12 p-3">
+                    <p>
+                        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#cllArticulos">
+                            Articulos
+                        </button>
+                    </p>
+                    <div class="collapse" id="cllArticulos">
+                        <div class="card card-body">
+                            <table id="tblArticulos" class="table table-hover table-bordered" style="background-color: aliceblue;">
+                                <thead>
                                     <tr>
-                                        <td class="id">
-                                            <asp:Label ID="lblId" runat="server" Text='<%# Bind("ID") %>'></asp:Label>
-                                        </td>
-                                        <td class="usr">
-                                            <asp:Label ID="ldlDescripcion" runat="server" Text='<%#Bind("Descripcion")%>'></asp:Label>
-                                        </td>
-                                        <td class="est">
-                                            <asp:Label ID="lblEstado" runat="server" Text='<%#Bind("Estado")%>'></asp:Label>
-                                        </td>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Estado</th>
                                     </tr>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </tbody>
-                    </table>
+                                </thead>
+                                <tbody class="searchable" style="cursor: pointer">
+                                    <asp:Repeater ID="rpArticulos" runat="server">
+                                        <ItemTemplate>
+                                            <tr>
+                                                <td class="id">
+                                                    <asp:Label ID="lblId" runat="server" Text='<%# Bind("ID") %>'></asp:Label>
+                                                </td>
+                                                <td class="usr">
+                                                    <asp:Label ID="ldlDescripcion" runat="server" Text='<%#Bind("Descripcion")%>'></asp:Label>
+                                                </td>
+                                                <td class="est">
+                                                    <asp:Label ID="lblEstado" runat="server" Text='<%#Bind("Estado")%>'></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 p-3">
+                    <p>
+                        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#dllProveedores">
+                            Proveedores
+                        </button>
+                    </p>
+                    <div class="collapse" id="dllProveedores">
+                        <div class="card card-body">
+                            <table id="tblProveedores" class="table table-hover table-bordered" style="background-color: aliceblue;">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="searchable" style="cursor: pointer">
+                                    <asp:Repeater ID="rpProveedores" runat="server">
+                                        <ItemTemplate>
+                                            <tr>
+                                                <td class="id">
+                                                    <asp:Label ID="lblId" runat="server" Text='<%# Bind("Id") %>'></asp:Label>
+                                                </td>
+                                                <td class="usr">
+                                                    <asp:Label ID="ldlDescripcion" runat="server" Text='<%#Bind("DescripcionP")%>'></asp:Label>
+                                                </td>
+                                                <td class="est">
+                                                    <asp:Label ID="lblEstado" runat="server" Text='<%#Bind("Estado")%>'></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 p-3">
+                    <p>
+                        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#cllCategorias" aria-expanded="false" aria-controls="collapseExample">
+                            Categorias
+                        </button>
+                    </p>
+                    <div class="collapse" id="cllCategorias">
+                        <div class="card card-body">
+                            <table id="tblCategorias" class="table table-hover table-bordered" style="background-color: aliceblue;">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="searchable" style="cursor: pointer">
+                                    <asp:Repeater ID="rpCategorias" runat="server">
+                                        <ItemTemplate>
+                                            <tr>
+                                                <td class="id">
+                                                    <asp:Label ID="lblId" runat="server" Text='<%# Bind("ID") %>'></asp:Label>
+                                                </td>
+                                                <td class="usr">
+                                                    <asp:Label ID="ldlDescripcion" runat="server" Text='<%#Bind("DescripcionC")%>'></asp:Label>
+                                                </td>
+                                                <td class="est">
+                                                    <asp:Label ID="lblEstado" runat="server" Text='<%#Bind("Estado")%>'></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 p-3">
+                    <p>
+                        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#cllUsuarios" aria-expanded="false" aria-controls="collapseExample">
+                            Usuarios
+                        </button>
+                    </p>
+                    <div class="collapse" id="cllUsuarios">
+                        <div class="card card-body">
+                            <table id="tblUsuarios" class="table table-hover table-bordered" style="background-color: aliceblue;">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Nombre de usuario</th>
+                                        <th scope="col">Apellidos</th>
+                                        <th scope="col">Nombres</th>
+                                        <th scope="col">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="searchable" style="cursor: pointer">
+                                    <asp:Repeater ID="rpUsuarios" runat="server">
+                                        <ItemTemplate>
+                                            <tr>
+                                                <td class="id">
+                                                    <asp:Label ID="lblId" runat="server" Text='<%# Bind("ID") %>'></asp:Label>
+                                                </td>
+                                                <td class="usr">
+                                                    <asp:Label ID="ldlDescripcion" runat="server" Text='<%#Bind("NombreUsuario")%>'></asp:Label>
+                                                </td>
+                                                <td class="ape">
+                                                    <asp:Label ID="lblEstado" runat="server" Text='<%#Bind("Apellidos")%>'></asp:Label>
+                                                </td>
+                                                <td class="nom">
+                                                    <asp:Label ID="Label1" runat="server" Text='<%#Bind("Nombres")%>'></asp:Label>
+                                                </td>
+                                                <td class="est">
+                                                    <asp:Label ID="Label2" runat="server" Text='<%#Bind("Estado")%>'></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,6 +239,8 @@
     <script src="js/scripts.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 </body>
 </html>
@@ -147,4 +286,123 @@
         window.location = 'ABMArticulos.aspx?idArticulo=' + id;
     });
 
+    $(document).ready(function () {
+        $('#tblCategorias').dataTable({
+            language: {
+                "decimal": "",
+                "emptyTable": "No hay información",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+                "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Entradas",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "Sin resultados encontrados",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            },
+            columnDefs: [{
+                orderable: false,
+                className: 'select-checkbox',
+                targets: 0
+            }],
+            select: {
+                style: 'multi',
+                selector: 'td:first-child'
+            }
+        });
+    });
+
+    $("#tblCategorias tbody tr").click(function () {
+        var id = $('.id', this).html().trim();
+        id = removeLabel(id, '>', '<');
+        window.location = 'ABMCategorias.aspx?idCategoria=' + id;
+    });
+
+    $(document).ready(function () {
+        $('#tblProveedores').dataTable({
+            language: {
+                "decimal": "",
+                "emptyTable": "No hay información",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+                "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Entradas",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "Sin resultados encontrados",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            },
+            columnDefs: [{
+                orderable: false,
+                className: 'select-checkbox',
+                targets: 0
+            }],
+            select: {
+                style: 'multi',
+                selector: 'td:first-child'
+            }
+        });
+    });
+
+    $("#tblProveedores tbody tr").click(function () {
+        var id = $('.id', this).html().trim();
+        id = removeLabel(id, '>', '<');
+        window.location = 'ABMProveedores.aspx?idProveedor=' + id;
+    });
+
+    $(document).ready(function () {
+        $('#tblUsuarios').dataTable({
+            language: {
+                "decimal": "",
+                "emptyTable": "No hay información",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+                "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Entradas",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "Sin resultados encontrados",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            },
+            columnDefs: [{
+                orderable: false,
+                className: 'select-checkbox',
+                targets: 0
+            }],
+            select: {
+                style: 'multi',
+                selector: 'td:first-child'
+            }
+        });
+    });
+
+    $("#tblUsuarios tbody tr").click(function () {
+        var id = $('.id', this).html().trim();
+        id = removeLabel(id, '>', '<');
+        window.location = 'ABMUsuarios.aspx?idUsuario=' + id;
+    });
 </script>

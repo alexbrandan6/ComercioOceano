@@ -32,7 +32,7 @@ namespace PRESENTACION
                 Usuario usr = new Usuario();
                 usr.setApellidos(txtApellidos.Text);
                 usr.setContrasenia(txtContra.Text);
-                usr.setFechaNac(txtDia.Text, txtMes.Text, txtAnio.Text);
+                //usr.setFechaNac(txtDia.Text, txtMes.Text, txtAnio.Text);
                 usr.setDireccion(txtDireccion.Text);
                 usr.setGenero(ddlGenero.SelectedItem.ToString());
                 usr.setMail(txtMail.Text);

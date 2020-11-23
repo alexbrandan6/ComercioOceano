@@ -41,9 +41,9 @@ namespace NEGOCIO
             
         }
 
-        public void grabarUsuario(Usuario usr)
+        public bool grabarUsuario(Usuario usr)
         {
-            dao_u.grabarUsuario(usr);
+            return dao_u.grabarUsuario(usr);
         }
 
         public DataTable buscarUsuario(string nombreU, string contra)
@@ -56,6 +56,11 @@ namespace NEGOCIO
                 return dt;
             }
             else return null;
+        }
+
+        public DataTable obtenerUsuarioId(int idUsuario)
+        {
+            return dao_u.obtenerUsuarioId(idUsuario);
         }
 
         public string buscarAdmin(string nombreU, string contra)

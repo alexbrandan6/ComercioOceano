@@ -49,7 +49,7 @@ namespace PRESENTACION.PaginaAdmin
             usu.SetId(Convert.ToInt32(((Label)grid_Usuarios.Rows[e.RowIndex].FindControl("lbl_eit_ID")).Text));
             usu.setNombres(((TextBox)grid_Usuarios.Rows[e.RowIndex].FindControl("txt_eit_Nombres")).Text);
             usu.setApellidos(((TextBox)grid_Usuarios.Rows[e.RowIndex].FindControl("txt_eit_Apellidos")).Text);
-            usu.setFechaNac(((TextBox)grid_Usuarios.Rows[e.RowIndex].FindControl("txt_eit_FechaNacimiento")).Text);            
+            //usu.setFechaNac(((TextBox)grid_Usuarios.Rows[e.RowIndex].FindControl("txt_eit_FechaNacimiento")).Text);            
             usu.setGenero(((DropDownList)grid_Usuarios.Rows[e.RowIndex].FindControl("ddl_eit_Genero")).Text.Trim());
             usu.setNumeroTelefono(Convert.ToInt32(((TextBox)grid_Usuarios.Rows[e.RowIndex].FindControl("txt_eit_Telefono")).Text));
             usu.setDireccion(((TextBox)grid_Usuarios.Rows[e.RowIndex].FindControl("txt_eit_Direccion")).Text);

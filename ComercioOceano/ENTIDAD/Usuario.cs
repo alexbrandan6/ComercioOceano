@@ -11,7 +11,7 @@ namespace ENTIDAD
         private int id;
         private string apellidos;
         private string nombres;
-        private string fechaNac;
+        private DateTime fechaNac;
         private string genero;
         private int numeroTelefono;
         private string direccion;
@@ -21,7 +21,7 @@ namespace ENTIDAD
         public Usuario()
         {
         }
-        public Usuario(string nombres, string apellidos, string fechaNac, string genero, int numeroTelefono, string direccion,
+        public Usuario(string nombres, string apellidos, DateTime fechaNac, string genero, int numeroTelefono, string direccion,
            string mail, string nombreUsuario, string contrasenia)
         {
             this.nombres = nombres;
@@ -43,9 +43,9 @@ namespace ENTIDAD
         {
             return id;
         }
-        public void setFechaNac(string d, string m, string a)
+        public void setFechaNac(DateTime fechaNaci)
         {
-            fechaNac = d + "-" + m + "-" + a;
+            fechaNac = fechaNaci;
         }
         public void SetId(int i)
         {
@@ -67,11 +67,7 @@ namespace ENTIDAD
         {
             return nombres;
         }
-        public void setFechaNac(string fecha)
-        {
-            fechaNac = fecha;
-        }
-        public string getFechaNac()
+        public DateTime getFechaNac()
         {
             return fechaNac;
         }
