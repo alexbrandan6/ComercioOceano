@@ -24,14 +24,21 @@ namespace PRESENTACION
             {
                 try
                 {
-                    if (Request.QueryString["idCategoria"] != null)
+                    if (!IsPostBack)
                     {
-                        CargarData(Request.QueryString["idCategoria"]);
-                        btnEliminar.Visible = true;
-                    }
-                    else
-                    {
-                        btnEliminar.Visible = false;
+                        if (Request.QueryString["idCategoria"] != null)
+                        {
+                            CargarData(Request.QueryString["idCategoria"]);
+                            btnEliminar.Visible = true;
+                            btnAgregar.Visible = false;
+                            btnActualizar.Visible = true;
+                        }
+                        else
+                        {
+                            btnActualizar.Visible = false;
+                            btnAgregar.Visible = true;
+                            btnEliminar.Visible = false;
+                        }
                     }
                 }
                 catch (Exception)
@@ -86,7 +93,7 @@ namespace PRESENTACION
                     if (!n_categoria.grabarCategoria(cat))
                     {
                         lblMensaje.Text = "";
-                        lblMensaje.Text = "Error al guardar el Proveedor!";
+                        lblMensaje.Text = "Error al guardar la Categoria!";
                         lblMensaje.Attributes.Remove("class");
                         lblMensaje.Attributes.Add("class", "alert alert-danger");
                         lblMensaje.Visible = true;
@@ -94,7 +101,7 @@ namespace PRESENTACION
                     else
                     {
                         lblMensaje.Text = "";
-                        lblMensaje.Text = "El Proveedor se ha guardado con exito!";
+                        lblMensaje.Text = "La Categoria se ha guardado con exito!";
                         lblMensaje.Attributes.Remove("class");
                         lblMensaje.Attributes.Add("class", "alert alert-success");
                         lblMensaje.Visible = true;
@@ -126,7 +133,7 @@ namespace PRESENTACION
                 if (n_categoria.bajalogicaCategoria(cat))
                 {
                     lblMensaje.Text = "";
-                    lblMensaje.Text = "El Proveedor se ha eliminado con exito!";
+                    lblMensaje.Text = "La Categoria se ha eliminado con exito!";
                     lblMensaje.Attributes.Remove("class");
                     lblMensaje.Attributes.Add("class", "alert alert-success");
                     lblMensaje.Visible = true;
@@ -134,7 +141,7 @@ namespace PRESENTACION
                 else
                 {
                     lblMensaje.Text = "";
-                    lblMensaje.Text = "Error al eliminar el Proveedor!";
+                    lblMensaje.Text = "Error al eliminar la Categoria!";
                     lblMensaje.Attributes.Remove("class");
                     lblMensaje.Attributes.Add("class", "alert alert-danger");
                     lblMensaje.Visible = true;
@@ -152,6 +159,48 @@ namespace PRESENTACION
                 return true;
             else
                 return false;
+        }
+
+        protected void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (VerificarCampos())
+                {
+                    Categoria cat = new Categoria(txtDescripcion.Text, Boolean.Parse(ddlEstado.Text));
+                    cat.ID = int.Parse(Request.QueryString["idCategoria"]);
+                    if (!n_categoria.actualizarCategoria(cat))
+                    {
+                        lblMensaje.Text = "";
+                        lblMensaje.Text = "Error al actualizar la Categoria!";
+                        lblMensaje.Attributes.Remove("class");
+                        lblMensaje.Attributes.Add("class", "alert alert-danger");
+                        lblMensaje.Visible = true;
+                    }
+                    else
+                    {
+                        lblMensaje.Text = "";
+                        lblMensaje.Text = "La Categoria se ha actualizado con exito!";
+                        lblMensaje.Attributes.Remove("class");
+                        lblMensaje.Attributes.Add("class", "alert alert-success");
+                        lblMensaje.Visible = true;
+                    }
+                }
+                else
+                {
+                    lblMensaje.Text = "";
+                    lblMensaje.Text = "Complete todos los campos!";
+                    lblMensaje.Attributes.Remove("class");
+                    lblMensaje.Attributes.Add("class", "alert alert-warning");
+                    lblMensaje.Visible = true;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

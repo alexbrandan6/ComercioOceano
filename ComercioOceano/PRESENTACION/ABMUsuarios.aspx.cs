@@ -29,10 +29,14 @@ namespace PRESENTACION
                         if (Request.QueryString["idUsuario"] != null)
                         {
                             CargarData(Request.QueryString["idUsuario"]);
+                            btnAgregar.Visible = false;
+                            btnActualizar.Visible = true;
                             btnEliminar.Visible = true;
                         }
                         else
                         {
+                            btnActualizar.Visible = false;
+                            btnAgregar.Visible = true;
                             btnEliminar.Visible = false;
                         }
                     }
@@ -144,7 +148,33 @@ namespace PRESENTACION
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            // realizar la eliminacion de usuarios 
+            try
+            {
+                Usuario usr = new Usuario();
+                usr.SetId(int.Parse(Request.QueryString["idUsuario"]));
+
+                if (n_u.bajaLogicaUsuario(usr))
+                {
+                    lblMensaje.Text = "";
+                    lblMensaje.Text = "El Usuario se ha eliminado con exito!";
+                    lblMensaje.Attributes.Remove("class");
+                    lblMensaje.Attributes.Add("class", "alert alert-success");
+                    lblMensaje.Visible = true;
+                }
+                else
+                {
+                    lblMensaje.Text = "";
+                    lblMensaje.Text = "Error al eliminar el Usuario!";
+                    lblMensaje.Attributes.Remove("class");
+                    lblMensaje.Attributes.Add("class", "alert alert-danger");
+                    lblMensaje.Visible = true;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         protected bool VerificarCampos()
@@ -154,6 +184,50 @@ namespace PRESENTACION
                 return true;
             else
                 return false;
+        }
+
+        protected void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (VerificarCampos())
+                {
+                    Usuario usr = new Usuario(txtNombres.Text, txtApellidos.Text, DateTime.Parse(txtFechaNacimiento.Text), ddlGenero.SelectedValue, int.Parse(txtTelefono.Text),
+                        txtDireccion.Text, txtEmail.Text, txtNombreUsuario.Text, txtContra.Text);
+                    usr.SetId(int.Parse(Request.QueryString["idUsuario"]));
+                    N_Usuario n_Usuario = new N_Usuario();
+
+                    if (!n_Usuario.actualizarUsuario(usr))
+                    {
+                        lblMensaje.Text = "";
+                        lblMensaje.Text = "Error al actualizar el Usuario!";
+                        lblMensaje.Attributes.Remove("class");
+                        lblMensaje.Attributes.Add("class", "alert alert-danger");
+                        lblMensaje.Visible = true;
+                    }
+                    else
+                    {
+                        lblMensaje.Text = "";
+                        lblMensaje.Text = "El Usuario se ha actualizado con exito!";
+                        lblMensaje.Attributes.Remove("class");
+                        lblMensaje.Attributes.Add("class", "alert alert-success");
+                        lblMensaje.Visible = true;
+                    }
+                }
+                else
+                {
+                    lblMensaje.Text = "";
+                    lblMensaje.Text = "Complete todos los campos!";
+                    lblMensaje.Attributes.Remove("class");
+                    lblMensaje.Attributes.Add("class", "alert alert-warning");
+                    lblMensaje.Visible = true;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

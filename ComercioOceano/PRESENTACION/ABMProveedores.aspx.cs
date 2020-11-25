@@ -24,14 +24,21 @@ namespace PRESENTACION
             {
                 try
                 {
-                    if (Request.QueryString["idProveedor"] != null)
+                    if (!IsPostBack)
                     {
-                        CargarData(Request.QueryString["idProveedor"]);
-                        btnEliminar.Visible = true;
-                    }
-                    else
-                    {
-                        btnEliminar.Visible = false;
+                        if (Request.QueryString["idProveedor"] != null)
+                        {
+                            CargarData(Request.QueryString["idProveedor"]);
+                            btnEliminar.Visible = true;
+                            btnAgregar.Visible = false;
+                            btnActualizar.Visible = true;
+                        }
+                        else
+                        {
+                            btnActualizar.Visible = false;
+                            btnAgregar.Visible = true;
+                            btnEliminar.Visible = false;
+                        }
                     }
                 }
                 catch (Exception)
@@ -156,6 +163,49 @@ namespace PRESENTACION
                 return true;
             else
                 return false;
+        }
+
+        protected void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (VerificarCampos())
+                {
+                    Proveedor pro = new Proveedor(txtDescripcion.Text, txtDireccion.Text, txtTelefono.Text, txtMail.Text,
+                                    Boolean.Parse(ddlEstado.Text));
+                    pro.Id = int.Parse(Request.QueryString["idProveedor"]);
+                    if (!n_proveedor.actualizarProveedor(pro))
+                    {
+                        lblMensaje.Text = "";
+                        lblMensaje.Text = "Error al actualizar el Proveedor!";
+                        lblMensaje.Attributes.Remove("class");
+                        lblMensaje.Attributes.Add("class", "alert alert-danger");
+                        lblMensaje.Visible = true;
+                    }
+                    else
+                    {
+                        lblMensaje.Text = "";
+                        lblMensaje.Text = "El Proveedor se ha actualizado con exito!";
+                        lblMensaje.Attributes.Remove("class");
+                        lblMensaje.Attributes.Add("class", "alert alert-success");
+                        lblMensaje.Visible = true;
+                    }
+                }
+                else
+                {
+                    lblMensaje.Text = "";
+                    lblMensaje.Text = "Complete todos los campos!";
+                    lblMensaje.Attributes.Remove("class");
+                    lblMensaje.Attributes.Add("class", "alert alert-warning");
+                    lblMensaje.Visible = true;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

@@ -84,6 +84,8 @@
                     <br />
                     <asp:Button ID="btnAgregar" runat="server" Text="Agregar" CssClass="btn btn-outline-success pull-right" OnClick="btnAgregar_Click" />
                     &nbsp
+                    <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" CssClass="btn btn-outline-success pull-right" OnClick="btnActualizar_Click" />
+                    &nbsp
                     <button id="btnVolver" type="button" class="btn btn-outline-secondary" onclick="Cancelar()">Volver</button>
                     &nbsp
                     <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-outline-danger pull-right" OnClick="btnEliminar_Click"/>

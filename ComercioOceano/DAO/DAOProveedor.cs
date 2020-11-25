@@ -96,7 +96,7 @@ namespace DAO
         }
         public DataTable obtenerProveedorId(int idProveedor)
         {
-            DataTable tabla = ds.ObtenerTabla("Proveedor", "SELECT * FROM Proveedor where ID = " + idProveedor);
+            DataTable tabla = ds.ObtenerTabla("Proveedores", "SELECT * FROM Proveedores where ID = " + idProveedor);
             return tabla;
         }
     }

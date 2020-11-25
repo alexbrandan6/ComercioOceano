@@ -30,9 +30,13 @@ namespace PRESENTACION
                         {
                             CargarData(Request.QueryString["idArticulo"]);
                             btnEliminar.Visible = true;
+                            btnAgregar.Visible = false;
+                            btnActualizar.Visible = true;
                         }
                         else
                         {
+                            btnActualizar.Visible = false;
+                            btnAgregar.Visible = true;
                             btnEliminar.Visible = false;
                         }
                     }
@@ -196,6 +200,51 @@ namespace PRESENTACION
                 return true;
             else
                 return false;
+        }
+
+        protected void btnActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (VerificarCampos())
+                {
+                    Articulo art = new Articulo(txtDescripcion.Text, Byte.Parse(txtStock.Text), decimal.Parse(txtPrecioCompra.Text),
+                    decimal.Parse(txtPrecioVenta.Text), int.Parse(ddlProveedor.Text), DateTime.Parse(txtFechaVencimiento.Text),
+                    int.Parse(ddlCategoria.Text), txtImagenUrl.Text, Boolean.Parse(ddlEstado.Text));
+                    art.Id = int.Parse(Request.QueryString["idArticulo"]);
+                    N_Articulos n_Articulos = new N_Articulos();
+
+                    if (!n_Articulos.actualizarArticulo(art))
+                    {
+                        lblMensaje.Text = "";
+                        lblMensaje.Text = "Error al actualizar el Articulo!";
+                        lblMensaje.Attributes.Remove("class");
+                        lblMensaje.Attributes.Add("class", "alert alert-danger");
+                        lblMensaje.Visible = true;
+                    }
+                    else
+                    {
+                        lblMensaje.Text = "";
+                        lblMensaje.Text = "El Articulo se ha actualizado con exito!";
+                        lblMensaje.Attributes.Remove("class");
+                        lblMensaje.Attributes.Add("class", "alert alert-success");
+                        lblMensaje.Visible = true;
+                    }
+                }
+                else
+                {
+                    lblMensaje.Text = "";
+                    lblMensaje.Text = "Complete todos los campos!";
+                    lblMensaje.Attributes.Remove("class");
+                    lblMensaje.Attributes.Add("class", "alert alert-warning");
+                    lblMensaje.Visible = true;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

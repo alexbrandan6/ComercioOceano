@@ -43,7 +43,11 @@ namespace NEGOCIO
 
         public bool grabarUsuario(Usuario usr)
         {
-            return dao_u.grabarUsuario(usr);
+            if(dao_u.grabarUsuario(usr))
+            {
+                return true;
+            }
+            else return false;
         }
 
         public DataTable buscarUsuario(string nombreU, string contra)
@@ -93,7 +97,14 @@ namespace NEGOCIO
             }
             else return false;
         }
-
+        public bool bajaLogicaUsuario(Usuario usr)
+        {
+            if (dao_u.BajaLogicaUsuario(usr))
+            {
+                return true;
+            }
+            else return false;
+        }
         public DataTable filtrarUsuario(string nombre, string apellido, string nombreU, int ch)
         {
             string consulta;

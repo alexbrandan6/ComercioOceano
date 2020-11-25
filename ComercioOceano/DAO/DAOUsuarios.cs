@@ -34,26 +34,10 @@ namespace DAO
 
         public bool grabarUsuario(Usuario usr)
         {
-            string insert = "INSERT INTO Usuarios(Nombres, Apellidos, fechaNac, Genero, Telefono, Direccion, " +
-                "Mail, NombreUsuario, Contrasenia, Estado) VALUES (@nombres, @apellidos, @fechaNac, @genero, @telefono, " +
-                "@direccion, @mail, @nombreU, @contra, @estado)";
-            SqlConnection cnn = new SqlConnection();
-            cnn = ds.obtenerConexion();
-            SqlCommand cm = new SqlCommand(insert, cnn);
-            cm.Parameters.AddWithValue("@nombres", usr.getNombres());
-            cm.Parameters.AddWithValue("@apellidos", usr.getApellidos());
-            cm.Parameters.AddWithValue("@fechaNac", usr.getFechaNac());
-            cm.Parameters.AddWithValue("@genero", usr.getGenero());
-            cm.Parameters.AddWithValue("@telefono", usr.getNumeroTelefono());
-            cm.Parameters.AddWithValue("@direccion", usr.getDireccion());
-            cm.Parameters.AddWithValue("@mail", usr.getMail());
-            cm.Parameters.AddWithValue("@nombreU", usr.getNombreUsuario());
-            cm.Parameters.AddWithValue("@contra", usr.getContrasenia());
-            cm.Parameters.AddWithValue("@estado",1);
-
-            int FilasCambiadas = cm.ExecuteNonQuery();
-            cnn.Close();
-            if (FilasCambiadas == 1)
+            SqlCommand Comando = new SqlCommand();
+            ArmarParametrosUsuarioAgregar(ref Comando, usr);
+            int FilasInsertadas = ds.EjecutarProcedimientoAlmacenado(Comando, "SP_AgregarUsuario");
+            if (FilasInsertadas == 1)
                 return true;
             else
                 return false;
@@ -148,9 +132,47 @@ namespace DAO
             SqlParametros = Comando.Parameters.Add("@Contraseña", SqlDbType.VarChar, 100);
             SqlParametros.Value = usu.getContrasenia();
         }
+        private void ArmarParametrosUsuarioAgregar(ref SqlCommand Comando, Usuario usu)
+        {
+            SqlParameter SqlParametros = new SqlParameter();
+            SqlParametros = Comando.Parameters.Add("@Nombres", SqlDbType.VarChar, 50);
+            SqlParametros.Value = usu.getNombres();
+            SqlParametros = Comando.Parameters.Add("@Apellidos", SqlDbType.VarChar, 50);
+            SqlParametros.Value = usu.getApellidos();
+            SqlParametros = Comando.Parameters.Add("@FechaNacimiento", SqlDbType.Date);
+            SqlParametros.Value = usu.getFechaNac();
+            SqlParametros = Comando.Parameters.Add("@Genero", SqlDbType.Char, 1);
+            SqlParametros.Value = usu.getGenero();
+            SqlParametros = Comando.Parameters.Add("@Telefono", SqlDbType.VarChar, 20);
+            SqlParametros.Value = usu.getNumeroTelefono();
+            SqlParametros = Comando.Parameters.Add("@Direccion", SqlDbType.VarChar, 50);
+            SqlParametros.Value = usu.getDireccion();
+            SqlParametros = Comando.Parameters.Add("@Mail", SqlDbType.VarChar, 50);
+            SqlParametros.Value = usu.getMail();
+            SqlParametros = Comando.Parameters.Add("@NombreUsuario", SqlDbType.VarChar, 100);
+            SqlParametros.Value = usu.getNombreUsuario();
+            SqlParametros = Comando.Parameters.Add("@Contraseña", SqlDbType.VarChar, 100);
+            SqlParametros.Value = usu.getContrasenia();
+        }
         public DataTable filtrarUsuario(string consulta)
         {
             return ds.ObtenerTabla("Usuarios", consulta);
+        }
+        private void ArmarParametrosUsuarioBajaLogica(ref SqlCommand Comando, Usuario usr)
+        {
+            SqlParameter SqlParametros = new SqlParameter();
+            SqlParametros = Comando.Parameters.Add("@Id", SqlDbType.BigInt);
+            SqlParametros.Value = usr.getId();
+        }
+        public bool BajaLogicaUsuario(Usuario usr)
+        {
+            SqlCommand Comando = new SqlCommand();
+            ArmarParametrosUsuarioBajaLogica(ref Comando, usr);
+            int FilasInsertadas = ds.EjecutarProcedimientoAlmacenado(Comando, "SP_BajaLogicaUsuario");
+            if (FilasInsertadas == 1)
+                return true;
+            else
+                return false;
         }
     }
 }
