@@ -9,7 +9,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"/>
-
+    <!-- Imports Dialog alert -->
+    <link rel="stylesheet" href="css/jquery-dialog-alerts.css"/>
     <!-- Imports css login -->
     <link rel="stylesheet" href="css/login.css"/>
 </head>
@@ -37,23 +38,6 @@
                         <asp:Button ID="btnEntrar" runat="server" CssClass="btn btn-primary" Text="Entrar" OnClick="btnEntrar_Click" />
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-12 p-2  d-flex justify-content-center">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" >Crear Usuario</button>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12 p-2">
-                        <div id="alertMensaje" role="alert" runat="server">
-                            <strong>Atención!</strong> <asp:Label ID="lblMensaje" runat="server"></asp:Label>
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                              </button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </form>
@@ -61,5 +45,9 @@
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-dialog-alerts.js"></script>
+
+    <div id="myConfirm"></div>
+    <asp:Label ID="lblAlert" runat="server" Text=""></asp:Label> 
 </body>
 </html>

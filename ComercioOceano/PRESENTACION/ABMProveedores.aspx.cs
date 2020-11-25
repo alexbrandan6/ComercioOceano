@@ -96,28 +96,16 @@ namespace PRESENTACION
                                     Boolean.Parse(ddlEstado.Text));
                     if (!n_proveedor.grabarProveedor(pro))
                     {
-                        lblMensaje.Text = "";
-                        lblMensaje.Text = "Error al guardar el Proveedor!";
-                        lblMensaje.Attributes.Remove("class");
-                        lblMensaje.Attributes.Add("class", "alert alert-danger");
-                        lblMensaje.Visible = true;
+                        lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Error', message: 'El Proveedor no pudo guardarse.' })</script>";
                     }
                     else
                     {
-                        lblMensaje.Text = "";
-                        lblMensaje.Text = "El Proveedor se ha guardado con exito!";
-                        lblMensaje.Attributes.Remove("class");
-                        lblMensaje.Attributes.Add("class", "alert alert-success");
-                        lblMensaje.Visible = true;
+                        lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Exito', message: 'El Proveedor se guardo correctamente.' })</script>";
                     }
                 }
                 else
                 {
-                    lblMensaje.Text = "";
-                    lblMensaje.Text = "Complete todos los campos!";
-                    lblMensaje.Attributes.Remove("class");
-                    lblMensaje.Attributes.Add("class", "alert alert-warning");
-                    lblMensaje.Visible = true;
+                    lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Atencion', message: 'Complete todos los campos.' })</script>";
                 }
                     
             }
@@ -136,19 +124,11 @@ namespace PRESENTACION
 
                 if (n_proveedor.bajaLogicaProveedor(pro))
                 {
-                    lblMensaje.Text = "";
-                    lblMensaje.Text = "El Proveedor se ha eliminado con exito!";
-                    lblMensaje.Attributes.Remove("class");
-                    lblMensaje.Attributes.Add("class", "alert alert-success");
-                    lblMensaje.Visible = true;
+                    lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Exito', message: 'El Proveedor se elimino correctamente.' })</script>";
                 }
                 else
                 {
-                    lblMensaje.Text = "";
-                    lblMensaje.Text = "Error al eliminar el Proveedor!";
-                    lblMensaje.Attributes.Remove("class");
-                    lblMensaje.Attributes.Add("class", "alert alert-danger");
-                    lblMensaje.Visible = true;
+                    lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Error', message: 'El Proveedor no se pudo eliminar.' })</script>";
                 }
             }
             catch (Exception)
@@ -176,28 +156,16 @@ namespace PRESENTACION
                     pro.Id = int.Parse(Request.QueryString["idProveedor"]);
                     if (!n_proveedor.actualizarProveedor(pro))
                     {
-                        lblMensaje.Text = "";
-                        lblMensaje.Text = "Error al actualizar el Proveedor!";
-                        lblMensaje.Attributes.Remove("class");
-                        lblMensaje.Attributes.Add("class", "alert alert-danger");
-                        lblMensaje.Visible = true;
+                        lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Error', message: 'El Proveedor no se pudo actualizar.' })</script>";
                     }
                     else
                     {
-                        lblMensaje.Text = "";
-                        lblMensaje.Text = "El Proveedor se ha actualizado con exito!";
-                        lblMensaje.Attributes.Remove("class");
-                        lblMensaje.Attributes.Add("class", "alert alert-success");
-                        lblMensaje.Visible = true;
+                        lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Exito', message: 'El Proveedor se actualizo correctamente.' })</script>";
                     }
                 }
                 else
                 {
-                    lblMensaje.Text = "";
-                    lblMensaje.Text = "Complete todos los campos!";
-                    lblMensaje.Attributes.Remove("class");
-                    lblMensaje.Attributes.Add("class", "alert alert-warning");
-                    lblMensaje.Visible = true;
+                    lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Atencion', message: 'Complete todos los campos.' })</script>";
                 }
 
             }

@@ -92,28 +92,16 @@ namespace PRESENTACION
                     Categoria cat = new Categoria(txtDescripcion.Text, Boolean.Parse(ddlEstado.Text));
                     if (!n_categoria.grabarCategoria(cat))
                     {
-                        lblMensaje.Text = "";
-                        lblMensaje.Text = "Error al guardar la Categoria!";
-                        lblMensaje.Attributes.Remove("class");
-                        lblMensaje.Attributes.Add("class", "alert alert-danger");
-                        lblMensaje.Visible = true;
+                        lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Error', message: 'La Categoria no pudo guardarse.' })</script>";
                     }
                     else
                     {
-                        lblMensaje.Text = "";
-                        lblMensaje.Text = "La Categoria se ha guardado con exito!";
-                        lblMensaje.Attributes.Remove("class");
-                        lblMensaje.Attributes.Add("class", "alert alert-success");
-                        lblMensaje.Visible = true;
+                        lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Exito', message: 'La Categoria se guardo correctamente.' })</script>";
                     }
                 }
                 else
                 {
-                    lblMensaje.Text = "";
-                    lblMensaje.Text = "Complete todos los campos!";
-                    lblMensaje.Attributes.Remove("class");
-                    lblMensaje.Attributes.Add("class", "alert alert-warning");
-                    lblMensaje.Visible = true;
+                    lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Atencion', message: 'Complete todos los campos.' })</script>";
                 }
 
             }
@@ -132,19 +120,11 @@ namespace PRESENTACION
 
                 if (n_categoria.bajalogicaCategoria(cat))
                 {
-                    lblMensaje.Text = "";
-                    lblMensaje.Text = "La Categoria se ha eliminado con exito!";
-                    lblMensaje.Attributes.Remove("class");
-                    lblMensaje.Attributes.Add("class", "alert alert-success");
-                    lblMensaje.Visible = true;
+                    lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Exito', message: 'La Categoria se elimino correctamente.' })</script>";
                 }
                 else
                 {
-                    lblMensaje.Text = "";
-                    lblMensaje.Text = "Error al eliminar la Categoria!";
-                    lblMensaje.Attributes.Remove("class");
-                    lblMensaje.Attributes.Add("class", "alert alert-danger");
-                    lblMensaje.Visible = true;
+                    lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Error', message: 'La Categoria no se pudo eliminar.' })</script>";
                 }
             }
             catch (Exception)
@@ -171,28 +151,16 @@ namespace PRESENTACION
                     cat.ID = int.Parse(Request.QueryString["idCategoria"]);
                     if (!n_categoria.actualizarCategoria(cat))
                     {
-                        lblMensaje.Text = "";
-                        lblMensaje.Text = "Error al actualizar la Categoria!";
-                        lblMensaje.Attributes.Remove("class");
-                        lblMensaje.Attributes.Add("class", "alert alert-danger");
-                        lblMensaje.Visible = true;
+                        lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Error', message: 'La Categoria no se pudo actualizar.' })</script>";
                     }
                     else
                     {
-                        lblMensaje.Text = "";
-                        lblMensaje.Text = "La Categoria se ha actualizado con exito!";
-                        lblMensaje.Attributes.Remove("class");
-                        lblMensaje.Attributes.Add("class", "alert alert-success");
-                        lblMensaje.Visible = true;
+                        lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Exito', message: 'La Categoria se actualizo correctamente.' })</script>";
                     }
                 }
                 else
                 {
-                    lblMensaje.Text = "";
-                    lblMensaje.Text = "Complete todos los campos!";
-                    lblMensaje.Attributes.Remove("class");
-                    lblMensaje.Attributes.Add("class", "alert alert-warning");
-                    lblMensaje.Visible = true;
+                    lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Atencion', message: 'Complete todos los campos.' })</script>";
                 }
 
             }

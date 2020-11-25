@@ -77,11 +77,5 @@ namespace PRESENTACION
         {
             // Llenar para ir a pagina del perfil
         }
-
-        protected void btnSalir_Click(object sender, EventArgs e)
-        {
-            Session["stUser"] = null;
-            Response.Redirect("Login.aspx");
-        }
     }
 }

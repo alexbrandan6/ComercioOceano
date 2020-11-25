@@ -133,28 +133,16 @@ namespace PRESENTACION
 
                     if (!n_Articulos.grabarArticulo(art))
                     {
-                        lblMensaje.Text = "";
-                        lblMensaje.Text = "Error al guardar el Articulo!";
-                        lblMensaje.Attributes.Remove("class");
-                        lblMensaje.Attributes.Add("class", "alert alert-danger");
-                        lblMensaje.Visible = true;
+                        lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Error', message: 'El Articulo no pudo guardarse.' })</script>";
                     }
                     else
                     {
-                        lblMensaje.Text = "";
-                        lblMensaje.Text = "El Articulo se ha guardado con exito!";
-                        lblMensaje.Attributes.Remove("class");
-                        lblMensaje.Attributes.Add("class", "alert alert-success");
-                        lblMensaje.Visible = true;
+                        lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Exito', message: 'El Articulo se guardo correctamente.' })</script>";
                     }
                 }
                 else
                 {
-                    lblMensaje.Text = "";
-                    lblMensaje.Text = "Complete todos los campos!";
-                    lblMensaje.Attributes.Remove("class");
-                    lblMensaje.Attributes.Add("class", "alert alert-warning");
-                    lblMensaje.Visible = true;
+                    lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Atencion', message: 'Complete todos los campos.' })</script>";
                 }
             }
             catch (Exception)
@@ -173,19 +161,11 @@ namespace PRESENTACION
 
                 if (n_a.bajalogicaArticulo(art))
                 {
-                    lblMensaje.Text = "";
-                    lblMensaje.Text = "El Articulo se ha eliminado con exito!";
-                    lblMensaje.Attributes.Remove("class");
-                    lblMensaje.Attributes.Add("class", "alert alert-success");
-                    lblMensaje.Visible = true;
+                    lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Exito', message: 'El Articulo se elimino correctamente.' })</script>";
                 }
                 else
                 {
-                    lblMensaje.Text = "";
-                    lblMensaje.Text = "Error al eliminar el Articulo!";
-                    lblMensaje.Attributes.Remove("class");
-                    lblMensaje.Attributes.Add("class", "alert alert-danger");
-                    lblMensaje.Visible = true;
+                    lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Error', message: 'El Articulo no se pudo eliminar.' })</script>";
                 }
             }
             catch (Exception)
@@ -216,28 +196,16 @@ namespace PRESENTACION
 
                     if (!n_Articulos.actualizarArticulo(art))
                     {
-                        lblMensaje.Text = "";
-                        lblMensaje.Text = "Error al actualizar el Articulo!";
-                        lblMensaje.Attributes.Remove("class");
-                        lblMensaje.Attributes.Add("class", "alert alert-danger");
-                        lblMensaje.Visible = true;
+                        lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Error', message: 'El Articulo no se pudo actualizar.' })</script>";
                     }
                     else
                     {
-                        lblMensaje.Text = "";
-                        lblMensaje.Text = "El Articulo se ha actualizado con exito!";
-                        lblMensaje.Attributes.Remove("class");
-                        lblMensaje.Attributes.Add("class", "alert alert-success");
-                        lblMensaje.Visible = true;
+                        lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Exito', message: 'El Articulo se actualizo correctamente.' })</script>";
                     }
                 }
                 else
                 {
-                    lblMensaje.Text = "";
-                    lblMensaje.Text = "Complete todos los campos!";
-                    lblMensaje.Attributes.Remove("class");
-                    lblMensaje.Attributes.Add("class", "alert alert-warning");
-                    lblMensaje.Visible = true;
+                    lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Atencion', message: 'Complete todos los campos.' })</script>";
                 }
             }
             catch (Exception)

@@ -17,9 +17,6 @@ namespace PRESENTACION
             if (!IsPostBack)
             {
                 Session["stUser"] = null;
-                alertMensaje.Attributes.Remove("class");
-                lblMensaje.Text = "";
-                alertMensaje.Visible = false;
             }
         }
 
@@ -36,14 +33,11 @@ namespace PRESENTACION
                     if (A != "0")
                     {
                         Session["stUser"] = txtNombreUsuario.Text.Trim();
-                        Response.Redirect("PAginaPrincipalAdmin.aspx?AdminU=" + A);
+                        Response.Redirect("PAginaPrincipalAdmin.aspx");
                     }
                     else
                     {
-                        alertMensaje.Attributes.Remove("class");
-                        alertMensaje.Attributes.Add("class", "alert alert-danger alert-dismissible fade show");
-                        lblMensaje.Text = "Credenciales invalidas!";
-                        alertMensaje.Visible = true;
+                        lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Error', message: 'Credenciales invalidas.' })</script>";
                     }
 
                 }
@@ -54,10 +48,7 @@ namespace PRESENTACION
             }
             else
             {
-                alertMensaje.Attributes.Remove("class");
-                alertMensaje.Attributes.Add("class", "alert alert-warning alert-dismissible fade show");
-                lblMensaje.Text = "Complete los campos!";
-                alertMensaje.Visible = true;
+                lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Atencion', message: 'Complete todos los campos.' })</script>";
             }
             
         }

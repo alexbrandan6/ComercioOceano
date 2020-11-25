@@ -11,6 +11,9 @@
     <link href="../css/footer.css" rel="stylesheet" />
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+    <!-- Imports Dialog alert -->
+    <link rel="stylesheet" href="css/jquery-dialog-alerts.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -22,7 +25,7 @@
                 <asp:Button ID="btnCategorias" Text="Categorias" runat="server" CssClass="btn btn-primary" OnClick="btnCategorias_Click" />
                 <asp:Button ID="btnUsuarios" Text="Usuarios" runat="server" CssClass="btn btn-primary" OnClick="btnUsuarios_Click" />
                 <asp:Button ID="btnPerfil" Text="Ver Perfil" runat="server" CssClass="btn btn-primary" OnClick="btnPerfil_Click" />
-                <asp:Button ID="btnSalir" Text="Salir" runat="server" CssClass="btn btn-danger" OnClick="btnSalir_Click" />
+                <a ID="btnSalir" class="btn btn-danger"><i style="font-size:24px; padding-top: 10px;" class="fa">&#xf011;</i></a>
             </div>
         </div>
 
@@ -196,11 +199,10 @@
             </div>
         </div>
     </form>
-
+    <div id="myConfirm"></div>
     <footer class="footer-distributed">
 
         <div class="footer-left">
-            <img src="IMAGENES/imagenes/logoComercioOceano.png">
             <p class="footer-company-name">© 2020 Alex Brandan</p>
         </div>
 
@@ -233,13 +235,13 @@
             </div>
         </div>
     </footer>
-
+    
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/jquery-dialog-alerts.js"></script>
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 </body>
@@ -405,4 +407,16 @@
         id = removeLabel(id, '>', '<');
         window.location = 'ABMUsuarios.aspx?idUsuario=' + id;
     });
+
+    $('#btnSalir').click(function () {
+        $('#myConfirm').simpleConfirm({
+            message: '¿Esta seguro de querer salir?',
+            success: function () {
+                window.location = 'Login.aspx';
+            },
+            cancel: function () {
+
+            }
+        })
+    })
 </script>
