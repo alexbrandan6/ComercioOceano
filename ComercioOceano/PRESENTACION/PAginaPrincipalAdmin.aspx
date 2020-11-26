@@ -24,7 +24,7 @@
                 <asp:Button ID="btnProveedores" Text="Proveedores" runat="server" CssClass="btn btn-primary" OnClick="btnProveedores_Click" />
                 <asp:Button ID="btnCategorias" Text="Categorias" runat="server" CssClass="btn btn-primary" OnClick="btnCategorias_Click" />
                 <asp:Button ID="btnUsuarios" Text="Usuarios" runat="server" CssClass="btn btn-primary" OnClick="btnUsuarios_Click" />
-                <asp:Button ID="btnPerfil" Text="Ver Perfil" runat="server" CssClass="btn btn-primary" OnClick="btnPerfil_Click" />
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPerfil">Perfil</button>
                 <a ID="btnSalir" class="btn btn-danger"><i style="font-size:24px; padding-top: 10px;" class="fa">&#xf011;</i></a>
             </div>
         </div>
@@ -198,6 +198,37 @@
                 </div>
             </div>
         </div>
+
+        <div id="modalPerfil" class="modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Perfil</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label class="control-label">Nombre de usuario</label>
+                                    <asp:TextBox ID="txtNombreUsuario" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="control-label">Contraseña</label>
+                                    <asp:TextBox ID="txtContra" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">Guardar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
     <div id="myConfirm"></div>
     <footer class="footer-distributed">
@@ -280,15 +311,7 @@
                 selector: 'td:first-child'
             }
         });
-    });
 
-    $("#tblArticulos tbody tr").click(function () {
-        var id = $('.id', this).html().trim();
-        id = removeLabel(id, '>', '<');
-        window.location = 'ABMArticulos.aspx?idArticulo=' + id;
-    });
-
-    $(document).ready(function () {
         $('#tblCategorias').dataTable({
             language: {
                 "decimal": "",
@@ -320,15 +343,7 @@
                 selector: 'td:first-child'
             }
         });
-    });
 
-    $("#tblCategorias tbody tr").click(function () {
-        var id = $('.id', this).html().trim();
-        id = removeLabel(id, '>', '<');
-        window.location = 'ABMCategorias.aspx?idCategoria=' + id;
-    });
-
-    $(document).ready(function () {
         $('#tblProveedores').dataTable({
             language: {
                 "decimal": "",
@@ -360,15 +375,7 @@
                 selector: 'td:first-child'
             }
         });
-    });
 
-    $("#tblProveedores tbody tr").click(function () {
-        var id = $('.id', this).html().trim();
-        id = removeLabel(id, '>', '<');
-        window.location = 'ABMProveedores.aspx?idProveedor=' + id;
-    });
-
-    $(document).ready(function () {
         $('#tblUsuarios').dataTable({
             language: {
                 "decimal": "",
@@ -400,6 +407,26 @@
                 selector: 'td:first-child'
             }
         });
+
+        $('#cllArticulos').collapse('show');
+    });
+
+    $("#tblArticulos tbody tr").click(function () {
+        var id = $('.id', this).html().trim();
+        id = removeLabel(id, '>', '<');
+        window.location = 'ABMArticulos.aspx?idArticulo=' + id;
+    });
+
+    $("#tblCategorias tbody tr").click(function () {
+        var id = $('.id', this).html().trim();
+        id = removeLabel(id, '>', '<');
+        window.location = 'ABMCategorias.aspx?idCategoria=' + id;
+    });
+
+    $("#tblProveedores tbody tr").click(function () {
+        var id = $('.id', this).html().trim();
+        id = removeLabel(id, '>', '<');
+        window.location = 'ABMProveedores.aspx?idProveedor=' + id;
     });
 
     $("#tblUsuarios tbody tr").click(function () {

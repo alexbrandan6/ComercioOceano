@@ -67,6 +67,11 @@ namespace DAO
             DataTable tabla = ds.ObtenerTabla("Usuarios", "SELECT * FROM Usuarios where ID = " + idUsuario);
             return tabla;
         }
+        public DataTable obtenerAdminId(int idAdmin)
+        {
+            DataTable tabla = ds.ObtenerTabla("UsuariosAdmin", "SELECT * FROM UsuariosAdmin where ID = " + idAdmin);
+            return tabla;
+        }
 
         public DataTable buscarAdmin(string nombreU, string contra)
         {

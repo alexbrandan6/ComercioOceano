@@ -22,6 +22,7 @@ namespace PRESENTACION
             if (Session["stUser"] == null)
             {
                 Session["stUser"] = null;
+                Session["stUserId"] = null;
                 Response.Redirect("Login.aspx");
             }
             else
@@ -29,6 +30,7 @@ namespace PRESENTACION
                 if (!IsPostBack)
                 {
                     cargarGridViews();
+                    cargarPerfil(int.Parse(Session["stUserId"].ToString()));
                 }
             }
         }
@@ -52,6 +54,12 @@ namespace PRESENTACION
             rpUsuarios.DataSource = tabla;
             rpUsuarios.DataBind();
         }
+        public void cargarPerfil(int idUsuario)
+        {
+            DataTable dtUsuario = n_u.obtenerAdminId(idUsuario);
+            txtNombreUsuario.Text = dtUsuario.Rows[0]["NombreUsuario"].ToString();
+            txtContra.Text = dtUsuario.Rows[0]["Contrasenia"].ToString();
+        }
 
         protected void btnArticulos_Click(object sender, EventArgs e)
         {
@@ -71,11 +79,6 @@ namespace PRESENTACION
         protected void btnUsuarios_Click(object sender, EventArgs e)
         {
             Response.Redirect("ABMUsuarios.aspx");
-        }
-
-        protected void btnPerfil_Click(object sender, EventArgs e)
-        {
-            // Llenar para ir a pagina del perfil
         }
     }
 }

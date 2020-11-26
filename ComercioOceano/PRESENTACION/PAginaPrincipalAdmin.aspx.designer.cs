@@ -60,15 +60,6 @@ namespace PRESENTACION
         protected global::System.Web.UI.WebControls.Button btnUsuarios;
 
         /// <summary>
-        /// Control btnPerfil.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPerfil;
-
-        /// <summary>
         /// Control rpArticulos.
         /// </summary>
         /// <remarks>
@@ -103,5 +94,23 @@ namespace PRESENTACION
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rpUsuarios;
+
+        /// <summary>
+        /// Control txtNombreUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNombreUsuario;
+
+        /// <summary>
+        /// Control txtContra.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtContra;
     }
 }

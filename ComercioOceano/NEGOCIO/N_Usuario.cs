@@ -66,17 +66,21 @@ namespace NEGOCIO
         {
             return dao_u.obtenerUsuarioId(idUsuario);
         }
+        public DataTable obtenerAdminId(int idAdmin)
+        {
+            return dao_u.obtenerAdminId(idAdmin);
+        }
 
-        public string buscarAdmin(string nombreU, string contra)
+        public DataTable buscarAdmin(string nombreU, string contra)
         {
             DataTable dt = new DataTable();
             dt = dao_u.buscarAdmin(nombreU, contra);
 
             if (dt.Rows.Count > 0)
             {
-                return dt.Rows[0]["NombreUsuario"].ToString();
+                return dt;
             }
-            else return "0";
+            else return null;
         }
 
         public DataTable cargarUsuario(string nombreU)

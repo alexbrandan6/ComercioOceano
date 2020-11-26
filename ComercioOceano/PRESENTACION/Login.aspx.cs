@@ -17,6 +17,7 @@ namespace PRESENTACION
             if (!IsPostBack)
             {
                 Session["stUser"] = null;
+                Session["stUserId"] = null;
             }
         }
 
@@ -25,14 +26,16 @@ namespace PRESENTACION
             if(txtNombreUsuario.Text != "" && txtContra.Text != "")
             {
                 DataTable U = new DataTable();
+                DataTable dtAdmin = new DataTable();
                 U = n_u.buscarUsuario(txtNombreUsuario.Text.Trim(), txtContra.Text.Trim());
-                string A = n_u.buscarAdmin(txtNombreUsuario.Text.Trim(), txtContra.Text.Trim());
+                dtAdmin = n_u.buscarAdmin(txtNombreUsuario.Text.Trim(), txtContra.Text.Trim());
 
                 if (U == null)
                 {
-                    if (A != "0")
+                    if (dtAdmin != null)
                     {
-                        Session["stUser"] = txtNombreUsuario.Text.Trim();
+                        Session["stUser"] = dtAdmin.Rows[0]["NombreUsuario"].ToString();
+                        Session["stUserId"] = dtAdmin.Rows[0]["ID"].ToString();
                         Response.Redirect("PAginaPrincipalAdmin.aspx");
                     }
                     else

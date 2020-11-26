@@ -1,13 +1,10 @@
-﻿using System;
+﻿using NEGOCIO;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using NEGOCIO;
+using System.Linq;
+using System.Web.UI.WebControls;
 
 namespace PRESENTACION
 {
@@ -41,19 +38,19 @@ namespace PRESENTACION
         {
             DataTable U = new DataTable();
             U = n_u.buscarUsuario(txtNombreUsuario.Text.Trim(), txtContra.Text.Trim());
-            string A = n_u.buscarAdmin(txtNombreUsuario.Text.Trim(), txtContra.Text.Trim());
+            //string A = n_u.buscarAdmin(txtNombreUsuario.Text.Trim(), txtContra.Text.Trim());
 
             if (U == null)
             {
-                if (A != "0")
-                {
-                    Response.Redirect("PAginaPrincipalAdmin.aspx?AdminU=" + A);
-                }
-                else
-                {
-                    lblError.Text = "Nombre de usuario o contraseña incorrecto";
-                    lblError.ForeColor = Color.Red;
-                }
+                //if (A != "0")
+                //{
+                //    Response.Redirect("PAginaPrincipalAdmin.aspx?AdminU=" + A);
+                //}
+                //else
+                //{
+                //    lblError.Text = "Nombre de usuario o contraseña incorrecto";
+                //    lblError.ForeColor = Color.Red;
+                //}
 
             }
             else

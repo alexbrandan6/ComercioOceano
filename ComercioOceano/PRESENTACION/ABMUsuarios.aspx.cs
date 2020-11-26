@@ -18,6 +18,7 @@ namespace PRESENTACION
             if (Session["stUser"] == null)
             {
                 Session["stUser"] = null;
+                Session["stUserId"] = null;
                 Response.Redirect("Login.aspx");
             }
             else
@@ -67,11 +68,6 @@ namespace PRESENTACION
         protected void btnUsuarios_Click(object sender, EventArgs e)
         {
             Response.Redirect("ABMUsuarios.aspx");
-        }
-
-        protected void btnPerfil_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Perfil.aspx");
         }
 
         private void CargarData(String idUsuario)
