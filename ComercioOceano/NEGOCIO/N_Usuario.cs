@@ -101,6 +101,10 @@ namespace NEGOCIO
             }
             else return false;
         }
+        public void actualizarUsuarioDato(string scriptSql)
+        {
+            dao_u.EjecutarScript(scriptSql);
+        }
         public bool bajaLogicaUsuario(Usuario usr)
         {
             if (dao_u.BajaLogicaUsuario(usr))

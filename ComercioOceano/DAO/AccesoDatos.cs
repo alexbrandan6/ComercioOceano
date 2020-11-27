@@ -32,20 +32,41 @@ namespace DAO
             Conexion.Close();
             return ds.Tables[NombreTabla];
         }
+        public void EjecutarScript(string sqlScript)
+        {
+            try
+            {
+                SqlConnection Conexion = obtenerConexion();
+                SqlCommand cmd = new SqlCommand(sqlScript, Conexion);
+                Conexion.Open();
+                cmd.ExecuteNonQuery();
+                Conexion.Close();
+            }
+            catch (Exception)
+            {
 
-
+                throw;
+            }
+        }
         public int EjecutarProcedimientoAlmacenado(SqlCommand Comando, String NombreSP) //comando que recibe tiene los parametros incluidos
         {
-            int FilasCambiadas;
-            SqlConnection Conexion = obtenerConexion();
-            SqlCommand cmd = new SqlCommand();
-            cmd = Comando;
-            cmd.Connection = Conexion;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = NombreSP;
-            FilasCambiadas = cmd.ExecuteNonQuery();
-            Conexion.Close();
-            return FilasCambiadas;
+            try
+            {
+                int FilasCambiadas;
+                SqlConnection Conexion = obtenerConexion();
+                SqlCommand cmd = new SqlCommand();
+                cmd = Comando;
+                cmd.Connection = Conexion;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = NombreSP;
+                FilasCambiadas = cmd.ExecuteNonQuery();
+                Conexion.Close();
+                return FilasCambiadas;
+            }
+            catch (Exception ex)
+            {
+                return -1;
+            }
         }
     }
 }

@@ -72,6 +72,18 @@ namespace DAO
             DataTable tabla = ds.ObtenerTabla("UsuariosAdmin", "SELECT * FROM UsuariosAdmin where ID = " + idAdmin);
             return tabla;
         }
+        public void EjecutarScript(string sqlScript)
+        {
+            try
+            {
+                ds.EjecutarScript(sqlScript);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
         public DataTable buscarAdmin(string nombreU, string contra)
         {
@@ -136,6 +148,8 @@ namespace DAO
             SqlParametros.Value = usu.getNombreUsuario();
             SqlParametros = Comando.Parameters.Add("@Contraseña", SqlDbType.VarChar, 100);
             SqlParametros.Value = usu.getContrasenia();
+            SqlParametros = Comando.Parameters.Add("@Estado", SqlDbType.Int);
+            SqlParametros.Value = usu.getEstado();
         }
         private void ArmarParametrosUsuarioAgregar(ref SqlCommand Comando, Usuario usu)
         {

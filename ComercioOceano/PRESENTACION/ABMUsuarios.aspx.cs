@@ -85,6 +85,7 @@ namespace PRESENTACION
             txtFechaNacimiento.Text = FechaDDMMAAAA(tabla.Rows[0]["fechaNac"].ToString());
             ddlEstado.SelectedValue = tabla.Rows[0]["Estado"].ToString();
             txtDireccion.Text = tabla.Rows[0]["Direccion"].ToString();
+            txtContra.Text = tabla.Rows[0]["Contrasenia"].ToString();
         }
         private string FechaDDMMAAAA(string stFEcha)
         {
@@ -106,7 +107,7 @@ namespace PRESENTACION
                 if (VerificarCampos())
                 {
                     Usuario usr = new Usuario(txtNombres.Text, txtApellidos.Text, DateTime.Parse(txtFechaNacimiento.Text), ddlGenero.SelectedValue, int.Parse(txtTelefono.Text),
-                        txtDireccion.Text, txtEmail.Text, txtNombreUsuario.Text, txtContra.Text);
+                        txtDireccion.Text, txtEmail.Text, txtNombreUsuario.Text, txtContra.Text, int.Parse(ddlEstado.SelectedValue));
                     N_Usuario n_Usuario = new N_Usuario();
 
                     if (!n_Usuario.grabarUsuario(usr))
@@ -169,7 +170,7 @@ namespace PRESENTACION
                 if (VerificarCampos())
                 {
                     Usuario usr = new Usuario(txtNombres.Text, txtApellidos.Text, DateTime.Parse(txtFechaNacimiento.Text), ddlGenero.SelectedValue, int.Parse(txtTelefono.Text),
-                        txtDireccion.Text, txtEmail.Text, txtNombreUsuario.Text, txtContra.Text);
+                        txtDireccion.Text, txtEmail.Text, txtNombreUsuario.Text, txtContra.Text, int.Parse(ddlEstado.SelectedValue));
                     usr.SetId(int.Parse(Request.QueryString["idUsuario"]));
                     N_Usuario n_Usuario = new N_Usuario();
 

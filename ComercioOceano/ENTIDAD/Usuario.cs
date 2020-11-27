@@ -18,11 +18,12 @@ namespace ENTIDAD
         private string contrasenia;
         private string mail;
         private string nombreUsuario;
+        private int b_Estado;
         public Usuario()
         {
         }
         public Usuario(string nombres, string apellidos, DateTime fechaNac, string genero, int numeroTelefono, string direccion,
-           string mail, string nombreUsuario, string contrasenia)
+           string mail, string nombreUsuario, string contrasenia, int b_Estado)
         {
             this.nombres = nombres;
             this.apellidos = apellidos;
@@ -33,6 +34,7 @@ namespace ENTIDAD
             this.mail = mail;
             this.nombreUsuario = nombreUsuario;
             this.contrasenia = contrasenia;
+            this.b_Estado = b_Estado;
         }
         // Sets y Gets
         public void setId(int i)
@@ -70,6 +72,10 @@ namespace ENTIDAD
         public DateTime getFechaNac()
         {
             return fechaNac;
+        }
+        public int getEstado()
+        {
+            return b_Estado;
         }
         public void setGenero(string g)
         {
@@ -118,6 +124,11 @@ namespace ENTIDAD
         public string getNombreUsuario()
         {
             return nombreUsuario;
+        }
+        public int Estado
+        {
+            get { return b_Estado; }
+            set { b_Estado = value; }
         }
     }
 }

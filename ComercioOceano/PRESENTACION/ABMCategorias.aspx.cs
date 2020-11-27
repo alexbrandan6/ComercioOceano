@@ -85,7 +85,7 @@ namespace PRESENTACION
             {
                 if (VerificarCampos())
                 {
-                    Categoria cat = new Categoria(txtDescripcion.Text, Boolean.Parse(ddlEstado.Text));
+                    Categoria cat = new Categoria(txtDescripcion.Text, int.Parse(ddlEstado.Text));
                     if (!n_categoria.grabarCategoria(cat))
                     {
                         lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Error', message: 'La Categoria no pudo guardarse.' })</script>";
@@ -143,7 +143,7 @@ namespace PRESENTACION
             {
                 if (VerificarCampos())
                 {
-                    Categoria cat = new Categoria(txtDescripcion.Text, Boolean.Parse(ddlEstado.Text));
+                    Categoria cat = new Categoria(txtDescripcion.Text, int.Parse(ddlEstado.Text));
                     cat.ID = int.Parse(Request.QueryString["idCategoria"]);
                     if (!n_categoria.actualizarCategoria(cat))
                     {

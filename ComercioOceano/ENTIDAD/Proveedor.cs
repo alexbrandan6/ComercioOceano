@@ -13,11 +13,11 @@ namespace ENTIDAD
         private String s_Direccion;
         private String s_Telefono;
         private String s_Mail;
-        private Boolean b_Estado;
+        private int b_Estado;
         public Proveedor()
         {
         }
-        public Proveedor(String s_Descripcion, String s_Direccion, String s_Telefono, String s_Mail, Boolean b_Estado)
+        public Proveedor(String s_Descripcion, String s_Direccion, String s_Telefono, String s_Mail, int b_Estado)
         {
             this.s_Descripcion = s_Descripcion;
             this.s_Direccion = s_Direccion;
@@ -50,7 +50,7 @@ namespace ENTIDAD
             get { return s_Mail; }
             set { s_Mail = value; }
         }
-        public Boolean Estado
+        public int Estado
         {
             get { return b_Estado; }
             set { b_Estado = value; }

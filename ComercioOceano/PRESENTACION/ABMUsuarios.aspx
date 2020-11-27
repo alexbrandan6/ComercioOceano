@@ -77,7 +77,10 @@
                 </div>
                 <div class="col-sm-6">
                     <label class="control-label">Contraseña</label>
-                    <asp:TextBox ID="txtContra" runat="server" CssClass="form-control"></asp:TextBox>
+                    <div class="input-group">
+                        <asp:TextBox ID="txtContra" runat="server" CssClass="form-control" aria-describedby="btnSeePassword"></asp:TextBox>
+                        <span id="btnSeePassword" class="input-group-text" role="button"><i class="fa fa-eye-slash"></i></span>
+                    </div>
                 </div>
             </div>
 
@@ -85,8 +88,8 @@
                 <div class="col-sm-6">
                     <label class="control-label">Estado</label>
                     <asp:DropDownList ID="ddlEstado" runat="server" CssClass="form-control">
-                        <asp:ListItem Value="True">Activo</asp:ListItem>
-                        <asp:ListItem>Inactivo</asp:ListItem>
+                        <asp:ListItem Value="1">Activo</asp:ListItem>
+                        <asp:ListItem Value="0">Inactivo</asp:ListItem>
                     </asp:DropDownList>
                 </div>
             </div>
@@ -133,4 +136,23 @@
             }
         })
     })
+
+    function SeePassword(btnSeePassword) {
+        let txtPassword = document.querySelector('[id$=txtContra]');
+
+        if (txtPassword.type === 'password') {
+            txtPassword.type = 'text';
+            btnSeePassword.classList.remove('fa-eye-slash');
+            btnSeePassword.classList.add('fa-eye');
+        }
+        else {
+            txtPassword.type = 'password';
+            btnSeePassword.classList.add('fa-eye-slash');
+            btnSeePassword.classList.remove('fa-eye');
+        }
+    }
+
+    let btnSeePassword = document.querySelector('#btnSeePassword');
+    btnSeePassword.addEventListener('click', () => SeePassword(btnSeePassword.children[0]));
+    btnSeePassword.click();
 </script>

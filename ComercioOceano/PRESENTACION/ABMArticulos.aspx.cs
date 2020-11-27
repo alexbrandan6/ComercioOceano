@@ -124,7 +124,7 @@ namespace PRESENTACION
                 {
                     Articulo art = new Articulo(txtDescripcion.Text, Byte.Parse(txtStock.Text), decimal.Parse(txtPrecioCompra.Text),
                     decimal.Parse(txtPrecioVenta.Text), int.Parse(ddlProveedor.Text), DateTime.Parse(txtFechaVencimiento.Text),
-                    int.Parse(ddlCategoria.Text), txtImagenUrl.Text, Boolean.Parse(ddlEstado.Text));
+                    int.Parse(ddlCategoria.Text), txtImagenUrl.Text, int.Parse(ddlEstado.Text));
                     N_Articulos n_Articulos = new N_Articulos();
 
                     if (!n_Articulos.grabarArticulo(art))
@@ -186,7 +186,7 @@ namespace PRESENTACION
                 {
                     Articulo art = new Articulo(txtDescripcion.Text, Byte.Parse(txtStock.Text), decimal.Parse(txtPrecioCompra.Text),
                     decimal.Parse(txtPrecioVenta.Text), int.Parse(ddlProveedor.Text), DateTime.Parse(txtFechaVencimiento.Text),
-                    int.Parse(ddlCategoria.Text), txtImagenUrl.Text, Boolean.Parse(ddlEstado.Text));
+                    int.Parse(ddlCategoria.Text), txtImagenUrl.Text, int.Parse(ddlEstado.Text));
                     art.Id = int.Parse(Request.QueryString["idArticulo"]);
                     N_Articulos n_Articulos = new N_Articulos();
 

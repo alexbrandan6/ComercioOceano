@@ -17,12 +17,12 @@ namespace ENTIDAD
         private DateTime dt_FechaVencimiento;
         private int i_IdCategoria;
         private String s_ImagenUrl;
-        private Boolean b_Estado;
+        private int b_Estado;
         public Articulo()
         {
         }
         public Articulo(/*int i_Id,*/ String s_Descripcion, Byte b_Stock, Decimal d_PrecioCompra, Decimal d_PrecioVenta,
-            int i_IdProveedor, DateTime dt_FechaVencimiento, int i_IdCategoria, String s_ImagenUrl, Boolean b_Estado)
+            int i_IdProveedor, DateTime dt_FechaVencimiento, int i_IdCategoria, String s_ImagenUrl, int b_Estado)
         {
             //this.i_Id = i_Id;
             this.s_Descripcion = s_Descripcion;
@@ -80,7 +80,7 @@ namespace ENTIDAD
             get { return s_ImagenUrl; }
             set { s_ImagenUrl = value; }
         }
-        public Boolean Estado
+        public int Estado
         {
             get { return b_Estado; }
             set { b_Estado = value; }

@@ -34,8 +34,8 @@
                 <div class="col-sm-6">
                     <label class="control-label">Estado</label>
                     <asp:DropDownList ID="ddlEstado" runat="server" CssClass="form-control">
-                        <asp:ListItem Value="True">Activo</asp:ListItem>
-                        <asp:ListItem>Inactivo</asp:ListItem>
+                        <asp:ListItem Value="1">Activo</asp:ListItem>
+                        <asp:ListItem Value="0">Inactivo</asp:ListItem>
                     </asp:DropDownList>
                 </div>
             </div>

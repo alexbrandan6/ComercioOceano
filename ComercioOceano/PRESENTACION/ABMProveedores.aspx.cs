@@ -89,7 +89,7 @@ namespace PRESENTACION
                 if (VerificarCampos())
                 {
                     Proveedor pro = new Proveedor(txtDescripcion.Text, txtDireccion.Text, txtTelefono.Text, txtMail.Text,
-                                    Boolean.Parse(ddlEstado.Text));
+                                    int.Parse(ddlEstado.Text));
                     if (!n_proveedor.grabarProveedor(pro))
                     {
                         lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Error', message: 'El Proveedor no pudo guardarse.' })</script>";
@@ -148,7 +148,7 @@ namespace PRESENTACION
                 if (VerificarCampos())
                 {
                     Proveedor pro = new Proveedor(txtDescripcion.Text, txtDireccion.Text, txtTelefono.Text, txtMail.Text,
-                                    Boolean.Parse(ddlEstado.Text));
+                                    int.Parse(ddlEstado.Text));
                     pro.Id = int.Parse(Request.QueryString["idProveedor"]);
                     if (!n_proveedor.actualizarProveedor(pro))
                     {

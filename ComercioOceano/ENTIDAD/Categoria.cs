@@ -10,12 +10,12 @@ namespace ENTIDAD
     {
         private int i_ID;
         private String s_Descripcion;
-        private Boolean b_Estado;
+        private int b_Estado;
         public Categoria()
         {
         }
         //SI ES AUTONUMERICO EL ID DEJARLO COMENTADO DE LO CONTRARIO COMENTARLO
-        public Categoria(/*int i_ID, */String s_Descripcion, Boolean b_Estado)
+        public Categoria(/*int i_ID, */String s_Descripcion, int b_Estado)
         {
             //this.i_ID = i_ID;
             this.s_Descripcion = s_Descripcion;
@@ -31,7 +31,7 @@ namespace ENTIDAD
             get { return s_Descripcion; }
             set { s_Descripcion = value; }
         }
-        public Boolean Estado
+        public int Estado
         {
             get { return b_Estado; }
             set { b_Estado = value; }

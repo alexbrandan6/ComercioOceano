@@ -217,20 +217,23 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="control-label">Contraseña</label>
-                                    <asp:TextBox ID="txtContra" runat="server" CssClass="form-control"></asp:TextBox>
+                                    <div class="input-group">
+                                        <asp:TextBox ID="txtContra" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <span id="btnSeePassword" class="input-group-text" role="button"><i class="fa fa-eye-slash"></i></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success">Guardar</button>
+                        <asp:Button ID="btnGuardarUsuario" runat="server" class="btn btn-success" OnClick="btnGuardarUsuario_Click" Text="Guardar"/>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                     </div>
                 </div>
             </div>
         </div>
     </form>
-    <div id="myConfirm"></div>
+
     <footer class="footer-distributed">
 
         <div class="footer-left">
@@ -274,7 +277,8 @@
     <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
     <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
+    <div id="myConfirm"></div>
+    <asp:Label ID="lblAlert" runat="server" Text=""></asp:Label> 
 </body>
 </html>
 
@@ -446,4 +450,23 @@
             }
         })
     })
+
+    function SeePassword(btnSeePassword) {
+        let txtPassword = document.querySelector('[id$=txtContra]');
+
+        if (txtPassword.type === 'password') {
+            txtPassword.type = 'text';
+            btnSeePassword.classList.remove('fa-eye-slash');
+            btnSeePassword.classList.add('fa-eye');
+        }
+        else {
+            txtPassword.type = 'password';
+            btnSeePassword.classList.add('fa-eye-slash');
+            btnSeePassword.classList.remove('fa-eye');
+        }
+    }
+
+    let btnSeePassword = document.querySelector('#btnSeePassword');
+    btnSeePassword.addEventListener('click', () => SeePassword(btnSeePassword.children[0]));
+    btnSeePassword.click();
 </script>
