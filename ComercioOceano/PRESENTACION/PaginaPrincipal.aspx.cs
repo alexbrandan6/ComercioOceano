@@ -18,91 +18,26 @@ namespace PRESENTACION
         {
             if (!IsPostBack)
             {
-                DataTable tabla = n_a.obtenerTablaCategorias();
-                ddlCategorias.Items.Add("");
-                for (int i = 0; i < tabla.Rows.Count; i++)
-                {
-                    ddlCategorias.Items.Add(tabla.Rows[i]["DescripcionC"].ToString());
-                }
-
-
-                DataTable tabla2 = new DataTable();
-                tabla2 = n_a.obtenerTabla();
-                lvArticulos.DataSource = tabla2;
-                lvArticulos.DataBind();
+                cargarGridViews();
             }
 
         }
-
-        protected void btnEntrar_Click1(object sender, EventArgs e)
+        public void cargarGridViews()
         {
-            DataTable U = new DataTable();
-            U = n_u.buscarUsuario(txtNombreUsuario.Text.Trim(), txtContra.Text.Trim());
-            //string A = n_u.buscarAdmin(txtNombreUsuario.Text.Trim(), txtContra.Text.Trim());
-
-            if (U == null)
-            {
-                //if (A != "0")
-                //{
-                //    Response.Redirect("PAginaPrincipalAdmin.aspx?AdminU=" + A);
-                //}
-                //else
-                //{
-                //    lblError.Text = "Nombre de usuario o contraseña incorrecto";
-                //    lblError.ForeColor = Color.Red;
-                //}
-
-            }
-            else
-            {
-                Response.Redirect("PaginaPrincipalConUsuario.aspx?NomU=" + U.Rows[0]["NombreUsuario"].ToString() + "&IdU=" + U.Rows[0]["ID"].ToString());
-            }
-        }
-
-        protected void lkbCrearCuenta_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("PaginaCrearUsuario.aspx");
-        }
-
-        protected void btnBuscar_Click(object sender, EventArgs e)
-        {
-            string nombreA = txtNombreArticulo.Text.Trim();
-            string cat = ddlCategorias.SelectedItem.ToString();
-            string precio = txtPrecio.Text.Trim();
-            string rangoP = ddlPrecio.SelectedValue;
-
             DataTable tabla = new DataTable();
-            tabla = n_a.filtrarArticulo(nombreA, cat, precio, rangoP);
-            lvArticulos.DataSource = tabla;
-            lvArticulos.DataBind();
+
+            tabla = n_a.obtenerTabla();
+            rpArticulos.DataSource = tabla;
+            rpArticulos.DataBind();
+        }
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
 
-        protected void btnAgregar_Command1(object sender, CommandEventArgs e)
+        protected void btnCarrito_Click(object sender, EventArgs e)
         {
-            if (e.CommandName == "eventoAgregar")
-            {
-                if (id.Contains(e.CommandArgument) == false)
-                {
-                    id.Add(e.CommandArgument.ToString());
-                    Label4.ForeColor = Color.Green;
-                    Label4.Text = "Articulo agregado al carrito con exito";
-                }
-                else
-                {
-                    Label4.ForeColor = Color.Red;
-                    Label4.Text = "Articulo ya agregado al carrito";
-                }
-            }
-        }
 
-        protected void lkbRegistrarse_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("PaginaCrearUsuario.aspx");
-        }
-
-        protected void lkbCarrito_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Carrito.aspx");
         }
     }
 }

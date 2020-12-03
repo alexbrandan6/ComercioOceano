@@ -1,0 +1,17 @@
+﻿table {
+    width: 50%;
+    table-layout: fixed;
+}
+
+tr {
+    float: left;
+    width: 50%;
+    display: flex;
+}
+
+td {
+    width: 50%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}

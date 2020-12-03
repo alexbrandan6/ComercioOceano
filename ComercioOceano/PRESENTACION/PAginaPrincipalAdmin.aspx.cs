@@ -87,7 +87,7 @@ namespace PRESENTACION
             {
                 if (VerificarCampos())
                 {
-                    string scriptSql = "update UsuarioAdmin set NombreUsuario = " + txtNombreUsuario.Text + ", Contrasenia = " + txtContra.Text + " where ID = " + Request.QueryString["stUserId"].ToString();
+                    string scriptSql = "update UsuarioAdmin set NombreUsuario = " + txtNombreUsuario.Text + ", Contrasenia = " + txtContra.Text + " where ID = " + Session["stUserId"].ToString();
                     n_u.actualizarUsuarioDato(scriptSql);
                     lblAlert.Text = "<script type='text/javascript'>$('#myConfirm').simpleAlert({ title: 'Error', message: 'El Usuario no se pudo actualizar.' })</script>";
                 }

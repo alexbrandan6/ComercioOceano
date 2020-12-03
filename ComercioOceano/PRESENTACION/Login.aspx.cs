@@ -34,6 +34,8 @@ namespace PRESENTACION
                 {
                     if (dtAdmin != null)
                     {
+                        Session["stUser"] = null;
+                        Session["stUserId"] = null;
                         Session["stUser"] = dtAdmin.Rows[0]["NombreUsuario"].ToString();
                         Session["stUserId"] = dtAdmin.Rows[0]["ID"].ToString();
                         Response.Redirect("PAginaPrincipalAdmin.aspx");
@@ -46,7 +48,11 @@ namespace PRESENTACION
                 }
                 else
                 {
-                    Response.Redirect("PaginaPrincipalConUsuario.aspx?NomU=" + U.Rows[0]["NombreUsuario"].ToString() + "&IdU=" + U.Rows[0]["ID"].ToString());
+                    Session["stUser"] = null;
+                    Session["stUserId"] = null;
+                    Session["stUser"] = U.Rows[0]["NombreUsuario"].ToString();
+                    Session["stUserId"] = U.Rows[0]["ID"].ToString();
+                    Response.Redirect("PaginaPrincipalUsuario.aspx");
                 }
             }
             else
